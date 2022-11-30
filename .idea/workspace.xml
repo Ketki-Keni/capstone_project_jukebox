@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added fields in the SongRepository class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added method signature for displayAllSongs() in the SongRepository class">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +207,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669810975749</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added a no-arguments constructor in the SongRepository class">
+      <created>1669811037371</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669811037371</updated>
+    </task>
+    <task id="LOCAL-00024" summary="added method signature for displayAllSongs() in the SongRepository class">
+      <created>1669811180086</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1669811180086</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +257,9 @@
     <MESSAGE value="created method signature for play() and stop() methods in the MusicPlayerService class" />
     <MESSAGE value="created repository package and created class SongRepository.java inside repository package" />
     <MESSAGE value="added fields in the SongRepository class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fields in the SongRepository class" />
+    <MESSAGE value="added a no-arguments constructor in the SongRepository class" />
+    <MESSAGE value="added method signature for displayAllSongs() in the SongRepository class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method signature for displayAllSongs() in the SongRepository class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
