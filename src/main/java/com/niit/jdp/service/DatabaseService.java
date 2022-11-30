@@ -7,6 +7,8 @@
 package com.niit.jdp.service;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DatabaseService {
     private static final String URL = "jdbc:mysql://localhost:3306/jukebox";
@@ -18,4 +20,8 @@ public class DatabaseService {
         connection = null;
     }
 
+    public Connection getConnection() throws SQLException {
+        connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        return connection;
+    }
 }
