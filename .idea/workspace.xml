@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added fields in the PlaylistRepository class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added method signature for displayPlaylistSong() in the PlaylistRepository class">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +242,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669811571011</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added a no-arguments constructor in the SongRepository class">
+      <created>1669811720521</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1669811720521</updated>
+    </task>
+    <task id="LOCAL-00029" summary="added method signature for addSong() in the PlaylistRepository class">
+      <created>1669811850030</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1669811850030</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,8 +271,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed the source and target JDK version 19 to 11" />
-    <MESSAGE value="added dependency for mySql connector" />
     <MESSAGE value="created model package" />
     <MESSAGE value="created class Song.java inside model package" />
     <MESSAGE value="added private fields to the Song type" />
@@ -277,12 +289,14 @@
     <MESSAGE value="created method signature for play() and stop() methods in the MusicPlayerService class" />
     <MESSAGE value="created repository package and created class SongRepository.java inside repository package" />
     <MESSAGE value="added fields in the SongRepository class" />
-    <MESSAGE value="added a no-arguments constructor in the SongRepository class" />
     <MESSAGE value="added method signature for displayAllSongs() in the SongRepository class" />
     <MESSAGE value="added method signature for displaySongByName(), displaySongsByGenre(), displaySongsByArtistName() in the SongRepository class" />
     <MESSAGE value="created class PlaylistRepository.java inside repository package" />
     <MESSAGE value="added fields in the PlaylistRepository class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fields in the PlaylistRepository class" />
+    <MESSAGE value="added a no-arguments constructor in the PlaylistRepository class" />
+    <MESSAGE value="added method signature for addSong() in the PlaylistRepository class" />
+    <MESSAGE value="added method signature for displayPlaylistSong() in the PlaylistRepository class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method signature for displayPlaylistSong() in the PlaylistRepository class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
