@@ -6,5 +6,12 @@
 
 package com.niit.jdp.repository;
 
+import com.niit.jdp.service.DatabaseService;
+import com.niit.jdp.service.MusicPlayerService;
+import com.sun.jdi.connect.spi.Connection;
+
 public class SongRepository {
+    Connection connection;
+    DatabaseService databaseService;
+    MusicPlayerService musicPlayerService;
 }
