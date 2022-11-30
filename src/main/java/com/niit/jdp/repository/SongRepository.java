@@ -24,4 +24,16 @@ public class SongRepository {
     public List<Song> displayAllSongs() {
         return null;
     }
+
+    public Song displaySongByName() {
+        return null;
+    }
+
+    public List<Song> displaySongsByGenre() {
+        return null;
+    }
+
+    public List<Song> displaySongsByArtistName() {
+        return null;
+    }
 }
