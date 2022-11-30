@@ -6,5 +6,12 @@
 
 package com.niit.jdp.model;
 
+import java.util.List;
+
 public class Playlist {
+    List<Song> songList;
+    private int playlistNumber;
+    private String name;
+
+
 }
