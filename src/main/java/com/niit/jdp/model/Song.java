@@ -12,4 +12,15 @@ public class Song {
     private double duration;
     private String genre;
     private String artistName;
+
+    public Song() {
+    }
+
+    public Song(int serialNumber, String name, double duration, String genre, String artistName) {
+        this.serialNumber = serialNumber;
+        this.name = name;
+        this.duration = duration;
+        this.genre = genre;
+        this.artistName = artistName;
+    }
 }
