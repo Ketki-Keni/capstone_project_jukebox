@@ -6,9 +6,12 @@
 
 package com.niit.jdp.repository;
 
+import com.niit.jdp.model.Song;
 import com.niit.jdp.service.DatabaseService;
 import com.niit.jdp.service.MusicPlayerService;
 import com.sun.jdi.connect.spi.Connection;
+
+import java.util.List;
 
 public class SongRepository {
     Connection connection;
@@ -16,5 +19,9 @@ public class SongRepository {
     MusicPlayerService musicPlayerService;
 
     public SongRepository() {
+    }
+
+    public List<Song> displayAllSongs() {
+        return null;
     }
 }
