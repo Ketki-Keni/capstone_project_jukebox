@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added private fields to the song type">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added getter and setter for all fields in the song class">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +93,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669808229088</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added a no-arguments and a parameterized constructor in the song class">
+      <created>1669808486476</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669808486476</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added getter and setter for all fields in the song class">
+      <created>1669808580117</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669808580117</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,7 +128,9 @@
     <MESSAGE value="created model package" />
     <MESSAGE value="created class Song.java inside model package" />
     <MESSAGE value="added private fields to the song type" />
-    <option name="LAST_COMMIT_MESSAGE" value="added private fields to the song type" />
+    <MESSAGE value="added a no-arguments and a parameterized constructor in the song class" />
+    <MESSAGE value="added getter and setter for all fields in the song class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added getter and setter for all fields in the song class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
