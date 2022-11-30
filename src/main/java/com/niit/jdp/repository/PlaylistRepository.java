@@ -17,4 +17,8 @@ public class PlaylistRepository {
 
     public PlaylistRepository() {
     }
+
+    public boolean addSong() {
+        return false;
+    }
 }
