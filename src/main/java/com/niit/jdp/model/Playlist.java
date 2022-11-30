@@ -21,4 +21,28 @@ public class Playlist {
         this.playlistNumber = playlistNumber;
         this.name = name;
     }
+
+    public List<Song> getSongList() {
+        return songList;
+    }
+
+    public void setSongList(List<Song> songList) {
+        this.songList = songList;
+    }
+
+    public int getPlaylistNumber() {
+        return playlistNumber;
+    }
+
+    public void setPlaylistNumber(int playlistNumber) {
+        this.playlistNumber = playlistNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
