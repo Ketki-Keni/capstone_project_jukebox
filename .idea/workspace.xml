@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added a no-arguments constructor in the DatabaseService class">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" afterDir="false" />
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="created method signature for play() and stop() methods in the MusicPlayerService class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +172,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669810036871</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added getConnection in the DatabaseService class">
+      <created>1669810205745</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669810205745</updated>
+    </task>
+    <task id="LOCAL-00019" summary="created class MusicPlayerService.java inside service package">
+      <created>1669810275682</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669810275682</updated>
+    </task>
+    <task id="LOCAL-00020" summary="created method signature for play() and stop() methods in the MusicPlayerService class">
+      <created>1669810616307</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1669810616307</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,7 +224,10 @@
     <MESSAGE value="created service package and created class DatabaseService.java inside service package" />
     <MESSAGE value="added private fields in the DatabaseService class" />
     <MESSAGE value="added a no-arguments constructor in the DatabaseService class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a no-arguments constructor in the DatabaseService class" />
+    <MESSAGE value="added getConnection in the DatabaseService class" />
+    <MESSAGE value="created class MusicPlayerService.java inside service package" />
+    <MESSAGE value="created method signature for play() and stop() methods in the MusicPlayerService class" />
+    <option name="LAST_COMMIT_MESSAGE" value="created method signature for play() and stop() methods in the MusicPlayerService class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
