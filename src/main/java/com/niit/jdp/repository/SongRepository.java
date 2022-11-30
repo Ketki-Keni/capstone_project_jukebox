@@ -14,4 +14,7 @@ public class SongRepository {
     Connection connection;
     DatabaseService databaseService;
     MusicPlayerService musicPlayerService;
+
+    public SongRepository() {
+    }
 }
