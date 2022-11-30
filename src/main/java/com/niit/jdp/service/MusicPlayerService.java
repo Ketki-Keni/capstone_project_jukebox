@@ -7,4 +7,11 @@
 package com.niit.jdp.service;
 
 public class MusicPlayerService {
+    public void play() {
+
+    }
+
+    public void stop() {
+
+    }
 }
