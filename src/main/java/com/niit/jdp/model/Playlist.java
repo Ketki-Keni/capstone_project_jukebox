@@ -13,5 +13,12 @@ public class Playlist {
     private int playlistNumber;
     private String name;
 
+    public Playlist() {
+    }
 
+    public Playlist(List<Song> songList, int playlistNumber, String name) {
+        this.songList = songList;
+        this.playlistNumber = playlistNumber;
+        this.name = name;
+    }
 }
