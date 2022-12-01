@@ -36,7 +36,8 @@ public class SongRepository {
                 double duration = resultSet.getDouble("duration");
                 String genre = resultSet.getString("genre");
                 String artistName = resultSet.getString("artist_name");
-                Song song = new Song(serialNumber, name, duration, genre, artistName);
+                String album = resultSet.getString("album");
+                Song song = new Song(serialNumber, name, duration, genre, artistName, album);
                 songList.add(song);
             }
         } catch (SQLException exception) {
@@ -58,7 +59,8 @@ public class SongRepository {
                 double duration = resultSet.getDouble("duration");
                 String genre = resultSet.getString("genre");
                 String artistName = resultSet.getString("artist_name");
-                song = new Song(serialNumber, songName, duration, genre, artistName);
+                String album = resultSet.getString("album");
+                song = new Song(serialNumber, songName, duration, genre, artistName, album);
             }
         } catch (SQLException exception) {
             exception.printStackTrace();
