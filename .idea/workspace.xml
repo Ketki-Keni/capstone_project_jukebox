@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="completed methods displayPlaylistSongs() and createPlaylist()">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="made changes in DatabaseService class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -419,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669895212978</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="made changes in DatabaseService class">
+      <created>1669896913545</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1669896913545</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,7 +441,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created repository package and created class SongRepository.java inside repository package" />
     <MESSAGE value="added fields in the SongRepository class" />
     <MESSAGE value="added method signature for displayAllSongs() in the SongRepository class" />
     <MESSAGE value="added method signature for displaySongByName(), displaySongsByGenre(), displaySongsByArtistName() in the SongRepository class" />
@@ -459,7 +465,8 @@
     <MESSAGE value="refactored displaySongByName() method name to getSongByName()" />
     <MESSAGE value="added method getSongBySerialNumber() to the SongRepository class" />
     <MESSAGE value="completed methods displayPlaylistSongs() and createPlaylist()" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed methods displayPlaylistSongs() and createPlaylist()" />
+    <MESSAGE value="made changes in DatabaseService class" />
+    <option name="LAST_COMMIT_MESSAGE" value="made changes in DatabaseService class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

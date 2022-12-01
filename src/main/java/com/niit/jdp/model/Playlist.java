@@ -6,7 +6,6 @@
 
 package com.niit.jdp.model;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,16 +13,13 @@ public class Playlist {
     List<Song> songList;
     private int playlistNumber;
     private String name;
-    private int serialNumber;
 
     public Playlist() {
     }
 
-    public Playlist(List<Song> songList, int playlistNumber, String name, int serialNumber) {
-        this.songList = new ArrayList<>();
+    public Playlist(int playlistNumber, String name) {
         this.playlistNumber = playlistNumber;
         this.name = name;
-        this.serialNumber = serialNumber;
     }
 
     public List<Song> getSongList() {
@@ -50,21 +46,12 @@ public class Playlist {
         this.name = name;
     }
 
-    public int getSerialNumber() {
-        return serialNumber;
-    }
-
-    public void setSerialNumber(int serialNumber) {
-        this.serialNumber = serialNumber;
-    }
-
     @Override
     public String toString() {
         return "Playlist{" +
                 "songList=" + songList +
                 ", playlistNumber=" + playlistNumber +
                 ", name='" + name + '\'' +
-                ", serialNumber=" + serialNumber +
                 '}';
     }
 
@@ -73,11 +60,11 @@ public class Playlist {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Playlist playlist = (Playlist) o;
-        return getPlaylistNumber() == playlist.getPlaylistNumber() && getSerialNumber() == playlist.getSerialNumber() && Objects.equals(getSongList(), playlist.getSongList()) && Objects.equals(getName(), playlist.getName());
+        return getPlaylistNumber() == playlist.getPlaylistNumber() && Objects.equals(getSongList(), playlist.getSongList()) && Objects.equals(getName(), playlist.getName());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getSongList(), getPlaylistNumber(), getName(), getSerialNumber());
+        return Objects.hash(getSongList(), getPlaylistNumber(), getName());
     }
 }
