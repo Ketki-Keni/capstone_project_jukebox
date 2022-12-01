@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="made changes in DatabaseService class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="made changes in Playlist class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -426,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669896913545</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="made changes in Playlist class">
+      <created>1669912017261</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1669912017261</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -441,7 +449,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added fields in the SongRepository class" />
     <MESSAGE value="added method signature for displayAllSongs() in the SongRepository class" />
     <MESSAGE value="added method signature for displaySongByName(), displaySongsByGenre(), displaySongsByArtistName() in the SongRepository class" />
     <MESSAGE value="created class PlaylistRepository.java inside repository package" />
@@ -466,7 +473,8 @@
     <MESSAGE value="added method getSongBySerialNumber() to the SongRepository class" />
     <MESSAGE value="completed methods displayPlaylistSongs() and createPlaylist()" />
     <MESSAGE value="made changes in DatabaseService class" />
-    <option name="LAST_COMMIT_MESSAGE" value="made changes in DatabaseService class" />
+    <MESSAGE value="made changes in Playlist class" />
+    <option name="LAST_COMMIT_MESSAGE" value="made changes in Playlist class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

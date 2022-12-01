@@ -28,7 +28,7 @@ public class PlaylistRepository {
 
     public List<Song> displayPlaylistSongs() {
         List<Song> songList = new ArrayList<>();
-        String selectQuery = "SELECT * FROM `jukebox`.`song` INNER JOIN `jukebox`.`playlist` ON `song`.`serial_number` = `playlist`.`serial_number`;";
+        String selectQuery = "SELECT * FROM `jukebox`.`playlist`";
 
         try (Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(selectQuery);
@@ -48,21 +48,29 @@ public class PlaylistRepository {
         return songList;
     }
 
-    public boolean addSong() {
-        return false;
-    }
-
-    public boolean createPlaylist(Playlist playlist) {
-        int numberOfRowsAffected = 0;
-        String insertQuery = "INSERT INTO `jukebox`.`playlist` VALUES (?, ?, ?);";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
-            preparedStatement.setInt(1, playlist.getPlaylistNumber());
-            preparedStatement.setString(2, playlist.getName());
-            numberOfRowsAffected = preparedStatement.executeUpdate();
+    public Playlist createPlaylist(String playlistName) {
+        Playlist playlist = new Playlist();
+        String insertQuery = "INSERT INTO `jukebox`.`playlist` (`name`) VALUES (?);";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS)) {
+            preparedStatement.setString(1, playlistName);
+            int result = preparedStatement.executeUpdate();
+            if (result > 0) {
+                ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
+                if (generatedKeys.next()) {
+                    playlist.setPlaylistNumber(generatedKeys.getInt(1));
+                    playlist.setName(playlistName);
+                }
+            }
 
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
-        return numberOfRowsAffected > 0;
+        return playlist;
     }
+
+    public boolean addSong() {
+        return false;
+    }
+
+
 }
