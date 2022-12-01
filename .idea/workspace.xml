@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="created object of MusicPlayerService class and called play method inside main()">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="called displayAllSongs method of songRepository class inside main()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
     </list>
@@ -336,7 +336,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669876546742</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="completed displayAllSongs() method of the SongRepository class">
+      <created>1669886453813</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1669886453813</updated>
+    </task>
+    <task id="LOCAL-00034" summary="called displayAllSongs method of songRepository class inside main()">
+      <created>1669886615042</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1669886615042</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,9 +365,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added a no-arguments and a parameterized constructor in the song class" />
-    <MESSAGE value="added getter and setter for all fields in the song class" />
-    <MESSAGE value="created class Playlist.java inside model package" />
     <MESSAGE value="added private fields to the Playlist type" />
     <MESSAGE value="added a no-arguments and a parameterized constructor in the Playlist class" />
     <MESSAGE value="added getter and setter for all fields in the Playlist class" />
@@ -376,7 +387,10 @@
     <MESSAGE value="added method signature for createPlaylist() in the PlaylistRepository class" />
     <MESSAGE value="completed play() method of the MusicPlayerService class" />
     <MESSAGE value="added a song to songs folder inside resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a song to songs folder inside resources" />
+    <MESSAGE value="completed displayAllSongs() method of the SongRepository class" />
+    <MESSAGE value="created an object of songRepository class inside main()" />
+    <MESSAGE value="called displayAllSongs method of songRepository class inside main()" />
+    <option name="LAST_COMMIT_MESSAGE" value="called displayAllSongs method of songRepository class inside main()" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

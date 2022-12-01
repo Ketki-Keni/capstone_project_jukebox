@@ -10,10 +10,7 @@ import com.niit.jdp.model.Song;
 import com.niit.jdp.service.DatabaseService;
 import com.niit.jdp.service.MusicPlayerService;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +35,7 @@ public class SongRepository {
                 String name = resultSet.getString("name");
                 double duration = resultSet.getDouble("duration");
                 String genre = resultSet.getString("genre");
-                String artistName = resultSet.getString("artistName");
+                String artistName = resultSet.getString("artist_name");
                 Song song = new Song(serialNumber, name, duration, genre, artistName);
                 songList.add(song);
             }
@@ -49,8 +46,24 @@ public class SongRepository {
         return songList;
     }
 
-    public Song displaySongByName() {
-        return null;
+    public Song displaySongByName(String name) {
+        String selectQuery = "SELECT * FROM `jukebox`.`song` where (`name` = ?);";
+        Song song = null;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
+            preparedStatement.setString(1, name);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int serialNumber = resultSet.getInt("serial_number");
+                String songName = resultSet.getString("name");
+                double duration = resultSet.getDouble("duration");
+                String genre = resultSet.getString("genre");
+                String artistName = resultSet.getString("artist_name");
+                song = new Song(serialNumber, songName, duration, genre, artistName);
+            }
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+        return song;
     }
 
     public List<Song> displaySongsByGenre() {
