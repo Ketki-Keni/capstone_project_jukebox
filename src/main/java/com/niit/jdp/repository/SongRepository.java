@@ -22,6 +22,7 @@ public class SongRepository {
     public SongRepository() throws SQLException {
         databaseService = new DatabaseService();
         connection = databaseService.getConnection();
+        musicPlayerService = new MusicPlayerService();
     }
 
     public List<Song> displayAllSongs() {
@@ -60,7 +61,9 @@ public class SongRepository {
                 String genre = resultSet.getString("genre");
                 String artistName = resultSet.getString("artist_name");
                 String album = resultSet.getString("album");
+                String songPath = resultSet.getString("song_path");
                 song = new Song(serialNumber, songName, duration, genre, artistName, album);
+                musicPlayerService.play(songPath);
             }
         } catch (SQLException exception) {
             exception.printStackTrace();
