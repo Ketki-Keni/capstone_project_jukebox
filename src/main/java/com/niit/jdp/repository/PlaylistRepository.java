@@ -56,7 +56,10 @@ public class PlaylistRepository {
         int numberOfRowsAffected = 0;
         String insertQuery = "INSERT INTO `jukebox`.`playlist` VALUES (?, ?, ?);";
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
-            preparedStatement.setString(1, serialNumber);
+            preparedStatement.setInt(1, playlist.getPlaylistNumber());
+            preparedStatement.setString(2, playlist.getName());
+            numberOfRowsAffected = preparedStatement.executeUpdate();
+
         } catch (SQLException exception) {
             exception.printStackTrace();
         }

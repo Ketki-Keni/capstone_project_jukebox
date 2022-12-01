@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added method getSongBySerialNumber() to the SongRepository class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
