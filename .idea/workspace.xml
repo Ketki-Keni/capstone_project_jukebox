@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="called displaySongByName method of songRepository class inside main()">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" afterDir="false" />
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="initialised musicPlayerService object in the constructor&#10;called play method inside displaySongByName">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -363,7 +365,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669889001226</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="added new fields in the Song class">
+      <created>1669889304250</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1669889304250</updated>
+    </task>
+    <task id="LOCAL-00038" summary="made changes in displayAllSongs and displaySongByName methods in the SongRepository class">
+      <created>1669889440210</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1669889440210</updated>
+    </task>
+    <task id="LOCAL-00039" summary="initialised musicPlayerService object in the constructor&#10;called play method inside displaySongByName">
+      <created>1669889719151</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1669889719151</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,9 +401,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added getter and setter for all fields in the Playlist class" />
-    <MESSAGE value="added an override to toString(), equals() and hashCode() methods" />
-    <MESSAGE value="created service package and created class DatabaseService.java inside service package" />
     <MESSAGE value="added private fields in the DatabaseService class" />
     <MESSAGE value="added a no-arguments constructor in the DatabaseService class" />
     <MESSAGE value="added getConnection in the DatabaseService class" />
@@ -403,7 +423,10 @@
     <MESSAGE value="called displayAllSongs method of songRepository class inside main()" />
     <MESSAGE value="completed displaySongByName() method of the SongRepository class" />
     <MESSAGE value="called displaySongByName method of songRepository class inside main()" />
-    <option name="LAST_COMMIT_MESSAGE" value="called displaySongByName method of songRepository class inside main()" />
+    <MESSAGE value="added new fields in the Song class" />
+    <MESSAGE value="made changes in displayAllSongs and displaySongByName methods in the SongRepository class" />
+    <MESSAGE value="initialised musicPlayerService object in the constructor&#10;called play method inside displaySongByName" />
+    <option name="LAST_COMMIT_MESSAGE" value="initialised musicPlayerService object in the constructor&#10;called play method inside displaySongByName" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
