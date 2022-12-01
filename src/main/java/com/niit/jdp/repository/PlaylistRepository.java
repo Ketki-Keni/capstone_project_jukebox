@@ -69,11 +69,28 @@ public class PlaylistRepository {
     }
 
     public boolean addSong(int playlistId, String songIds) throws SQLException {
-        String updateQuery = "update `music_player`.`playlist` set `song_id` = ? where `Playlist_number` = ?;";
+        String updateQuery = "update `jukebox`.`playlist` set `song_id` = ? where `Playlist_number` = ?;";
         PreparedStatement statement = connection.prepareStatement(updateQuery);
         statement.setString(1, songIds);
         statement.setInt(2, playlistId);
         int result = statement.executeUpdate();
         return result > 0;
+    }
+
+    public List<Song> getSongsFromPlaylist(int playlistId) throws SQLException {
+        List<Song> songs = new ArrayList<>();
+        String query = "SELECT * FROM `jukebox`.`playlist` WHERE `Playlist_number` = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, playlistId);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()) {
+            String songId = resultSet.getString("song_id");
+            String[] songsFromPlaylist = songId.split(",");
+            for (String songIds : songsFromPlaylist) {
+                Song song = new SongRepository().getSongBySerialNumber(songIds);
+                songs.add(song);
+            }
+        }
+        return songs;
     }
 }

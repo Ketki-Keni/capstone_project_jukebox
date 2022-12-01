@@ -1,0 +1,76 @@
+Index: src/main/java/com/niit/jdp/repository/PlaylistRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\r\n * Author : Ketki Keni\r\n * Date : 30-11-2022\r\n * Created with : IntelliJ IDEA Community Edition\r\n */\r\n\r\npackage com.niit.jdp.repository;\r\n\r\nimport com.niit.jdp.model.Playlist;\r\nimport com.niit.jdp.model.Song;\r\nimport com.niit.jdp.service.DatabaseService;\r\nimport com.niit.jdp.service.MusicPlayerService;\r\n\r\nimport java.sql.*;\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class PlaylistRepository {\r\n    Connection connection;\r\n    DatabaseService databaseService;\r\n    MusicPlayerService musicPlayerService;\r\n\r\n    public PlaylistRepository() throws SQLException {\r\n        databaseService = new DatabaseService();\r\n        connection = databaseService.getConnection();\r\n        musicPlayerService = new MusicPlayerService();\r\n    }\r\n\r\n    public List<Song> displayPlaylistSongs() {\r\n        List<Song> songList = new ArrayList<>();\r\n        String selectQuery = \"SELECT * FROM `jukebox`.`song` INNER JOIN `jukebox`.`playlist` ON `song`.`serial_number` = `playlist`.`serial_number`;\";\r\n\r\n        try (Statement statement = connection.createStatement()) {\r\n            ResultSet resultSet = statement.executeQuery(selectQuery);\r\n            while (resultSet.next()) {\r\n                int serialNumber = resultSet.getInt(\"serial_number\");\r\n                String name = resultSet.getString(\"name\");\r\n                double duration = resultSet.getDouble(\"duration\");\r\n                String genre = resultSet.getString(\"genre\");\r\n                String artistName = resultSet.getString(\"artist_name\");\r\n                String album = resultSet.getString(\"album\");\r\n                Song song = new Song(serialNumber, name, duration, genre, artistName, album);\r\n                songList.add(song);\r\n            }\r\n        } catch (SQLException exception) {\r\n            exception.printStackTrace();\r\n        }\r\n        return songList;\r\n    }\r\n\r\n    public boolean addSong() {\r\n        return false;\r\n    }\r\n\r\n    public boolean createPlaylist(Playlist playlist) {\r\n        int numberOfRowsAffected = 0;\r\n        String insertQuery = \"INSERT INTO `jukebox`.`playlist` VALUES (?, ?, ?);\";\r\n        try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {\r\n            preparedStatement.setString(1, serialNumber);\r\n        } catch (SQLException exception) {\r\n            exception.printStackTrace();\r\n        }\r\n        return numberOfRowsAffected > 0;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/niit/jdp/repository/PlaylistRepository.java b/src/main/java/com/niit/jdp/repository/PlaylistRepository.java
+--- a/src/main/java/com/niit/jdp/repository/PlaylistRepository.java	
++++ b/src/main/java/com/niit/jdp/repository/PlaylistRepository.java	
+@@ -6,13 +6,11 @@
+ 
+ package com.niit.jdp.repository;
+ 
+-import com.niit.jdp.model.Playlist;
+ import com.niit.jdp.model.Song;
+ import com.niit.jdp.service.DatabaseService;
+ import com.niit.jdp.service.MusicPlayerService;
++import com.sun.jdi.connect.spi.Connection;
+ 
+-import java.sql.*;
+-import java.util.ArrayList;
+ import java.util.List;
+ 
+ public class PlaylistRepository {
+@@ -20,46 +18,18 @@
+     DatabaseService databaseService;
+     MusicPlayerService musicPlayerService;
+ 
+-    public PlaylistRepository() throws SQLException {
+-        databaseService = new DatabaseService();
+-        connection = databaseService.getConnection();
+-        musicPlayerService = new MusicPlayerService();
++    public PlaylistRepository() {
+     }
+ 
+     public List<Song> displayPlaylistSongs() {
+-        List<Song> songList = new ArrayList<>();
+-        String selectQuery = "SELECT * FROM `jukebox`.`song` INNER JOIN `jukebox`.`playlist` ON `song`.`serial_number` = `playlist`.`serial_number`;";
+-
+-        try (Statement statement = connection.createStatement()) {
+-            ResultSet resultSet = statement.executeQuery(selectQuery);
+-            while (resultSet.next()) {
+-                int serialNumber = resultSet.getInt("serial_number");
+-                String name = resultSet.getString("name");
+-                double duration = resultSet.getDouble("duration");
+-                String genre = resultSet.getString("genre");
+-                String artistName = resultSet.getString("artist_name");
+-                String album = resultSet.getString("album");
+-                Song song = new Song(serialNumber, name, duration, genre, artistName, album);
+-                songList.add(song);
+-            }
+-        } catch (SQLException exception) {
+-            exception.printStackTrace();
+-        }
+-        return songList;
++        return null;
+     }
+ 
+     public boolean addSong() {
+         return false;
+     }
+ 
+-    public boolean createPlaylist(Playlist playlist) {
+-        int numberOfRowsAffected = 0;
+-        String insertQuery = "INSERT INTO `jukebox`.`playlist` VALUES (?, ?, ?);";
+-        try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+-            preparedStatement.setString(1, serialNumber);
+-        } catch (SQLException exception) {
+-            exception.printStackTrace();
+-        }
+-        return numberOfRowsAffected > 0;
++    public void createPlaylist() {
++
+     }
+ }
