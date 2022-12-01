@@ -36,7 +36,22 @@ public class MusicPlayerService {
         }
     }
 
-    public void stop() {
-
+    public void stop(String songPath) {
+        //creating a file object to represent the song file
+        File songFile = new File(songPath);
+        try {
+            //creating an object of AudioInputStream class
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(songFile);
+            //getting a clip object from the AudioSystem
+            Clip clip = AudioSystem.getClip();
+            //open the clip and load the audio input stream
+            clip.open(audioInputStream);
+            //setting a loop for the sound file
+            clip.loop(clip.LOOP_CONTINUOUSLY);
+            //stop the clip
+            clip.stop();
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException exception) {
+            exception.printStackTrace();
+        }
     }
 }
