@@ -20,8 +20,12 @@ public class DatabaseService {
         connection = null;
     }
 
-    public Connection getConnection() throws SQLException {
+    public void connect() throws SQLException {
         connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+    }
+
+    public Connection getConnection() throws SQLException {
+        connect();
         return connection;
     }
 }
