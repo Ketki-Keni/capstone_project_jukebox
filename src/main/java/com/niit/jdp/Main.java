@@ -19,7 +19,7 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter the song name:");
             String songName = scanner.nextLine();
-            System.out.println(songRepository.displaySongByName(songName));
+            System.out.println(songRepository.getSongByName(songName));
 
         } catch (SQLException exception) {
             exception.printStackTrace();
