@@ -71,8 +71,27 @@ public class SongRepository {
         return song;
     }
 
-    public List<Song> displaySongsByGenre() {
-        return null;
+    public List<Song> displaySongsByGenre(String genre) {
+        List<Song> songList = new ArrayList<>();
+        String selectQuery = "SELECT * FROM `jukebox`.`song` where (`genre` = ?);";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
+            preparedStatement.setString(1, genre);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int serialNumber = resultSet.getInt("serial_number");
+                String name = resultSet.getString("name");
+                double duration = resultSet.getDouble("duration");
+                String songGenre = resultSet.getString("genre");
+                String artistName = resultSet.getString("artist_name");
+                String album = resultSet.getString("album");
+                Song song = new Song(serialNumber, name, duration, songGenre, artistName, album);
+                songList.add(song);
+            }
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+        return songList;
     }
 
     public List<Song> displaySongsByArtistName() {
