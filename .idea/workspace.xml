@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="completed play() method of the MusicPlayerService class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669811945179</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="completed play() method of the MusicPlayerService class">
+      <created>1669875330165</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1669875330165</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,7 +306,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created class Song.java inside model package" />
     <MESSAGE value="added private fields to the Song type" />
     <MESSAGE value="added a no-arguments and a parameterized constructor in the song class" />
     <MESSAGE value="added getter and setter for all fields in the song class" />
@@ -326,7 +330,8 @@
     <MESSAGE value="added method signature for addSong() in the PlaylistRepository class" />
     <MESSAGE value="added method signature for displayPlaylistSong() in the PlaylistRepository class" />
     <MESSAGE value="added method signature for createPlaylist() in the PlaylistRepository class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added method signature for createPlaylist() in the PlaylistRepository class" />
+    <MESSAGE value="completed play() method of the MusicPlayerService class" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed play() method of the MusicPlayerService class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
