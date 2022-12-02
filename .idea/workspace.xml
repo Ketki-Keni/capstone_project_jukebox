@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="completed method createPlaylist() of the PlaylistRepository class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="modified displayPlaylistSongs() and removed getSongsFromPlaylist() method of the PlaylistRepository class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,27 +111,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00001" summary="initial commit">
-      <created>1669806265130</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1669806265130</updated>
-    </task>
-    <task id="LOCAL-00002" summary="changed the source and target JDK version 19 to 11">
-      <created>1669806382379</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1669806382379</updated>
-    </task>
-    <task id="LOCAL-00003" summary="added dependency for mySql connector">
-      <created>1669807407728</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1669807407728</updated>
     </task>
     <task id="LOCAL-00004" summary="created model package">
       <created>1669807816136</created>
@@ -441,7 +420,42 @@
       <option name="project" value="LOCAL" />
       <updated>1669914340243</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="completed method addSong() of the PlaylistRepository class">
+      <created>1669916938079</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1669916938079</updated>
+    </task>
+    <task id="LOCAL-00049" summary="added method getSongsFromPlaylist() of the PlaylistRepository class">
+      <created>1669917987385</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1669917987385</updated>
+    </task>
+    <task id="LOCAL-00050" summary="corrected datatype of parameter in  getSongBySerialNumber() of the SongRepository class">
+      <created>1669951120819</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1669951120819</updated>
+    </task>
+    <task id="LOCAL-00051" summary="corrected name of the column in the query inside getSongBySerialNumber() of the SongRepository class">
+      <created>1669954081048</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1669954081048</updated>
+    </task>
+    <task id="LOCAL-00052" summary="modified displayPlaylistSongs() and removed getSongsFromPlaylist() method of the PlaylistRepository class">
+      <created>1669954178508</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1669954178508</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -456,11 +470,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added method signature for displaySongByName(), displaySongsByGenre(), displaySongsByArtistName() in the SongRepository class" />
-    <MESSAGE value="created class PlaylistRepository.java inside repository package" />
-    <MESSAGE value="added fields in the PlaylistRepository class" />
-    <MESSAGE value="added a no-arguments constructor in the PlaylistRepository class" />
-    <MESSAGE value="added method signature for addSong() in the PlaylistRepository class" />
     <MESSAGE value="added method signature for displayPlaylistSong() in the PlaylistRepository class" />
     <MESSAGE value="added method signature for createPlaylist() in the PlaylistRepository class" />
     <MESSAGE value="completed play() method of the MusicPlayerService class" />
@@ -481,7 +490,12 @@
     <MESSAGE value="made changes in DatabaseService class" />
     <MESSAGE value="made changes in Playlist class" />
     <MESSAGE value="completed method createPlaylist() of the PlaylistRepository class" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed method createPlaylist() of the PlaylistRepository class" />
+    <MESSAGE value="completed method addSong() of the PlaylistRepository class" />
+    <MESSAGE value="added method getSongsFromPlaylist() of the PlaylistRepository class" />
+    <MESSAGE value="corrected datatype of parameter in  getSongBySerialNumber() of the SongRepository class" />
+    <MESSAGE value="corrected name of the column in the query inside getSongBySerialNumber() of the SongRepository class" />
+    <MESSAGE value="modified displayPlaylistSongs() and removed getSongsFromPlaylist() method of the PlaylistRepository class" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified displayPlaylistSongs() and removed getSongsFromPlaylist() method of the PlaylistRepository class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
