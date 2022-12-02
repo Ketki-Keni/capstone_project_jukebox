@@ -48,11 +48,11 @@ public class SongRepository {
         return songList;
     }
 
-    public Song getSongBySerialNumber(String serialNumber) {
+    public Song getSongBySerialNumber(int serialNumber) {
         String selectQuery = "SELECT * FROM `jukebox`.`song` where (`serialNumber` = ?);";
         Song song = null;
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
-            preparedStatement.setString(1, serialNumber);
+            preparedStatement.setInt(1, serialNumber);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int serialNumber1 = resultSet.getInt("serial_number");
