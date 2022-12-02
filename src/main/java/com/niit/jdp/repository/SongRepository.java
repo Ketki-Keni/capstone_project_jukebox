@@ -49,7 +49,7 @@ public class SongRepository {
     }
 
     public Song getSongBySerialNumber(int serialNumber) {
-        String selectQuery = "SELECT * FROM `jukebox`.`song` where (`serialNumber` = ?);";
+        String selectQuery = "SELECT * FROM `jukebox`.`song` where (`serial_number` = ?);";
         Song song = null;
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setInt(1, serialNumber);
@@ -63,7 +63,7 @@ public class SongRepository {
                 String album = resultSet.getString("album");
                 String songPath = resultSet.getString("song_path");
                 song = new Song(serialNumber1, songName, duration, genre, artistName, album);
-                musicPlayerService.play(songPath);
+                //musicPlayerService.play(songPath);
             }
         } catch (SQLException exception) {
             exception.printStackTrace();
