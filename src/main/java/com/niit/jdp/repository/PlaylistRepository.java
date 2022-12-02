@@ -26,24 +26,19 @@ public class PlaylistRepository {
         musicPlayerService = new MusicPlayerService();
     }
 
-    public List<Song> displayPlaylistSongs() {
+    public List<Song> displayPlaylistSongs(int playlistId) throws SQLException {
         List<Song> songList = new ArrayList<>();
-        String selectQuery = "SELECT * FROM `jukebox`.`playlist`";
-
-        try (Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery(selectQuery);
-            while (resultSet.next()) {
-                int serialNumber = resultSet.getInt("serial_number");
-                String name = resultSet.getString("name");
-                double duration = resultSet.getDouble("duration");
-                String genre = resultSet.getString("genre");
-                String artistName = resultSet.getString("artist_name");
-                String album = resultSet.getString("album");
-                Song song = new Song(serialNumber, name, duration, genre, artistName, album);
+        String query = "SELECT * FROM `jukebox`.`playlist` WHERE `Playlist_number` = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, playlistId);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()) {
+            String songId = resultSet.getString("song_id");
+            String[] songsFromPlaylist = songId.split(",");
+            for (String songIds : songsFromPlaylist) {
+                Song song = new SongRepository().getSongBySerialNumber(Integer.parseInt(songIds));
                 songList.add(song);
             }
-        } catch (SQLException exception) {
-            exception.printStackTrace();
         }
         return songList;
     }
@@ -69,28 +64,11 @@ public class PlaylistRepository {
     }
 
     public boolean addSong(int playlistId, String songIds) throws SQLException {
-        String updateQuery = "update `jukebox`.`playlist` set `song_id` = ? where `Playlist_number` = ?;";
-        PreparedStatement statement = connection.prepareStatement(updateQuery);
-        statement.setString(1, songIds);
-        statement.setInt(2, playlistId);
-        int result = statement.executeUpdate();
+        String updateQuery = "UPDATE `jukebox`.`playlist` SET `song_id` = ? WHERE `Playlist_number` = ?;";
+        PreparedStatement preparedStatement = connection.prepareStatement(updateQuery);
+        preparedStatement.setString(1, songIds);
+        preparedStatement.setInt(2, playlistId);
+        int result = preparedStatement.executeUpdate();
         return result > 0;
-    }
-
-    public List<Song> getSongsFromPlaylist(int playlistId) throws SQLException {
-        List<Song> songs = new ArrayList<>();
-        String query = "SELECT * FROM `jukebox`.`playlist` WHERE `Playlist_number` = ?";
-        PreparedStatement preparedStatement = connection.prepareStatement(query);
-        preparedStatement.setInt(1, playlistId);
-        ResultSet resultSet = preparedStatement.executeQuery();
-        while (resultSet.next()) {
-            String songId = resultSet.getString("song_id");
-            String[] songsFromPlaylist = songId.split(",");
-            for (String songIds : songsFromPlaylist) {
-                Song song = new SongRepository().getSongBySerialNumber(songIds);
-                songs.add(song);
-            }
-        }
-        return songs;
     }
 }
