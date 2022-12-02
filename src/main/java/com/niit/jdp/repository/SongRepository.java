@@ -44,7 +44,6 @@ public class SongRepository {
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
-
         return songList;
     }
 
@@ -63,7 +62,7 @@ public class SongRepository {
                 String album = resultSet.getString("album");
                 String songPath = resultSet.getString("song_path");
                 song = new Song(serialNumber1, songName, duration, genre, artistName, album);
-                //musicPlayerService.play(songPath);
+                song.setSongPath(songPath);
             }
         } catch (SQLException exception) {
             exception.printStackTrace();
@@ -86,7 +85,7 @@ public class SongRepository {
                 String album = resultSet.getString("album");
                 String songPath = resultSet.getString("song_path");
                 song = new Song(serialNumber, songName, duration, genre, artistName, album);
-                musicPlayerService.play(songPath);
+                song.setSongPath(songPath);
             }
         } catch (SQLException exception) {
             exception.printStackTrace();
