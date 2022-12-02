@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="modified displayPlaylistSongs() and removed getSongsFromPlaylist() method of the PlaylistRepository class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="modified play() method and removed stop() in MusicPlayerService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
     </list>
@@ -111,27 +111,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00004" summary="created model package">
-      <created>1669807816136</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1669807816136</updated>
-    </task>
-    <task id="LOCAL-00005" summary="created class Song.java inside model package">
-      <created>1669807874273</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1669807874273</updated>
-    </task>
-    <task id="LOCAL-00006" summary="added private fields to the song type">
-      <created>1669808229088</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1669808229088</updated>
     </task>
     <task id="LOCAL-00007" summary="added a no-arguments and a parameterized constructor in the song class">
       <created>1669808486476</created>
@@ -455,7 +434,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669954178508</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="modified main() to be menu-driven">
+      <created>1669966837156</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1669966837156</updated>
+    </task>
+    <task id="LOCAL-00054" summary="modified getSongBySerialNumbe() and getSongByName()">
+      <created>1669975761480</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1669975761480</updated>
+    </task>
+    <task id="LOCAL-00055" summary="modified play() method and removed stop() in MusicPlayerService">
+      <created>1669982170065</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1669982170065</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -470,10 +470,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added method signature for displayPlaylistSong() in the PlaylistRepository class" />
-    <MESSAGE value="added method signature for createPlaylist() in the PlaylistRepository class" />
-    <MESSAGE value="completed play() method of the MusicPlayerService class" />
-    <MESSAGE value="added a song to songs folder inside resources" />
     <MESSAGE value="completed displayAllSongs() method of the SongRepository class" />
     <MESSAGE value="created an object of songRepository class inside main()" />
     <MESSAGE value="called displayAllSongs method of songRepository class inside main()" />
@@ -495,7 +491,11 @@
     <MESSAGE value="corrected datatype of parameter in  getSongBySerialNumber() of the SongRepository class" />
     <MESSAGE value="corrected name of the column in the query inside getSongBySerialNumber() of the SongRepository class" />
     <MESSAGE value="modified displayPlaylistSongs() and removed getSongsFromPlaylist() method of the PlaylistRepository class" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified displayPlaylistSongs() and removed getSongsFromPlaylist() method of the PlaylistRepository class" />
+    <MESSAGE value="modified main() to be menu-driven" />
+    <MESSAGE value="modified getSongBySerialNumbe() and getSongByName()" />
+    <MESSAGE value="modified play() method and removed stop() method in MusicPlayerService class" />
+    <MESSAGE value="modified play() method and removed stop() in MusicPlayerService" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified play() method and removed stop() in MusicPlayerService" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
