@@ -64,7 +64,7 @@
       <recent name="C:\Users\anken\IdeaProjects\capstone_project_jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.givenSongIdsThenAddSongsToPlaylistNotEquals">
+  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.givenPlaylistNameThenCreatePlaylistNotEquals">
     <configuration name="PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone_project_jukebox" />
       <option name="PACKAGE_NAME" value="" />
@@ -80,6 +80,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
       <option name="METHOD_NAME" value="givenPlaylistNameThenCreatePlaylist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistRepositoryTest.givenPlaylistNameThenCreatePlaylistNotEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_project_jukebox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
+      <option name="METHOD_NAME" value="givenPlaylistNameThenCreatePlaylistNotEquals" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -105,16 +115,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaylistRepositoryTest.givenSongsDatabaseThenReturnSongRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capstone_project_jukebox" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
-      <option name="METHOD_NAME" value="givenSongsDatabaseThenReturnSongRecords" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistNameThenCreatePlaylistNotEquals" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenSongIdsThenAddSongsToPlaylistNotEquals" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenSongIdsThenAddSongsToPlaylist" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistNameThenCreatePlaylist" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist" />
-        <item itemvalue="JUnit.PlaylistRepositoryTest.givenSongsDatabaseThenReturnSongRecords" />
       </list>
     </recent_temporary>
   </component>

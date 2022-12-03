@@ -51,6 +51,12 @@ public class PlaylistRepositoryTest {
     }
 
     @Test
+    public void givenPlaylistNameThenCreatePlaylistNotEquals() {
+        Playlist playlist = playlistRepository.createPlaylist("Rock");
+        assertNotEquals("Pop", playlist.getName());
+    }
+
+    @Test
     public void givenSongIdsThenAddSongsToPlaylist() throws SQLException {
         boolean addSong = playlistRepository.addSong(11, "2,3");
         assertEquals(true, addSong);
