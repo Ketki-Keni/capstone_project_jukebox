@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist() to the PlaylistRepositoryTest class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added givenPlaylistNameThenCreatePlaylist() to the PlaylistRepositoryTest class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +64,7 @@
       <recent name="C:\Users\anken\IdeaProjects\capstone_project_jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.givenPlaylistNameThenCreatePlaylist">
+  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.givenSongIdsThenAddSongsToPlaylist">
     <configuration name="PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone_project_jukebox" />
       <option name="PACKAGE_NAME" value="" />
@@ -84,21 +85,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaylistRepositoryTest.givenSongsDatabaseThenReturnSongRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaylistRepositoryTest.givenSongIdsThenAddSongsToPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone_project_jukebox" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
-      <option name="METHOD_NAME" value="givenSongsDatabaseThenReturnSongRecords" />
+      <option name="METHOD_NAME" value="givenSongIdsThenAddSongsToPlaylist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongRepositoryTest.givenSongIdThenReturnSongRecordByIdNotEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaylistRepositoryTest.givenSongsDatabaseThenReturnSongRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone_project_jukebox" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
-      <option name="METHOD_NAME" value="givenSongIdThenReturnSongRecordByIdNotEquals" />
+      <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
+      <option name="METHOD_NAME" value="givenSongsDatabaseThenReturnSongRecords" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlaylistRepositoryTest.givenSongIdsThenAddSongsToPlaylist" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistNameThenCreatePlaylist" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenSongsDatabaseThenReturnSongRecords" />
         <item itemvalue="JUnit.SongRepositoryTest.givenSongNameThenReturnSongRecordByNameNotEquals" />
-        <item itemvalue="JUnit.SongRepositoryTest.givenSongIdThenReturnSongRecordByIdNotEquals" />
       </list>
     </recent_temporary>
   </component>
@@ -143,13 +144,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00031" summary="completed play() method of the MusicPlayerService class">
-      <created>1669875330165</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1669875330165</updated>
     </task>
     <task id="LOCAL-00032" summary="added a song to songs folder inside resources">
       <created>1669876546742</created>
@@ -487,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670063916845</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="added givenPlaylistNameThenCreatePlaylist() to the PlaylistRepositoryTest class">
+      <created>1670064157568</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1670064157569</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -502,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modified play() method and removed stop() in MusicPlayerService" />
     <MESSAGE value="modified main() method,&#10;created object of musicPlayerService class and called play() method" />
     <MESSAGE value="added JUnit 5 dependency in the pom.xml" />
     <MESSAGE value="created SongRepositoryTest.java class" />
@@ -527,7 +527,8 @@
     <MESSAGE value="added setUp() to the PlaylistRepositoryTest class" />
     <MESSAGE value="added tearDown() to the PlaylistRepositoryTest class" />
     <MESSAGE value="added givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist() to the PlaylistRepositoryTest class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist() to the PlaylistRepositoryTest class" />
+    <MESSAGE value="added givenPlaylistNameThenCreatePlaylist() to the PlaylistRepositoryTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added givenPlaylistNameThenCreatePlaylist() to the PlaylistRepositoryTest class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

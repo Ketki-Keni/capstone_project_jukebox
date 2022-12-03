@@ -48,4 +48,10 @@ public class PlaylistRepositoryTest {
         Playlist playlist = playlistRepository.createPlaylist("Rock");
         assertEquals("Rock", playlist.getName());
     }
+
+    @Test
+    public void givenSongIdsThenAddSongsToPlaylist() throws SQLException {
+        boolean addSong = playlistRepository.addSong(11, "2,3");
+        assertEquals(true, addSong);
+    }
 }
