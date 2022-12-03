@@ -77,6 +77,12 @@ public class SongRepositoryTest {
     }
 
     @Test
+    public void givenArtistNameThenReturnSongRecordsByArtistNameNotEquals() {
+        List<Song> output = songRepository.displaySongsByArtistName("Skrillex");
+        assertNotEquals("Martin Garrix", output.get(0).getArtistName());
+    }
+
+    @Test
     public void givenSongIdThenReturnSongRecordById() {
         Song actual = songRepository.getSongBySerialNumber(1);
         assertEquals(1, actual.getSerialNumber());
