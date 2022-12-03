@@ -17,6 +17,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class PlaylistRepositoryTest {
     PlaylistRepository playlistRepository;
@@ -44,7 +45,7 @@ public class PlaylistRepositoryTest {
     }
 
     @Test
-    public void givenPlaylistNameThenCreatePlaylist() throws SQLException {
+    public void givenPlaylistNameThenCreatePlaylist() {
         Playlist playlist = playlistRepository.createPlaylist("Rock");
         assertEquals("Rock", playlist.getName());
     }
@@ -53,5 +54,11 @@ public class PlaylistRepositoryTest {
     public void givenSongIdsThenAddSongsToPlaylist() throws SQLException {
         boolean addSong = playlistRepository.addSong(11, "2,3");
         assertEquals(true, addSong);
+    }
+
+    @Test
+    public void givenSongIdsThenAddSongsToPlaylistNotEquals() throws SQLException {
+        boolean addSong = playlistRepository.addSong(11, "2,3");
+        assertNotEquals(false, addSong);
     }
 }
