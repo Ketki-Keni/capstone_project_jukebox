@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added givenSongNameThenReturnSongRecordByNameNotEquals() to the SongRepositoryTest class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added fields to the PlaylistRepositoryTest class">
+      <change beforePath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,34 +146,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00024" summary="added method signature for displayAllSongs() in the SongRepository class">
-      <created>1669811180086</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1669811180086</updated>
-    </task>
-    <task id="LOCAL-00025" summary="added method signature for displaySongByName(), displaySongsByGenre(), displaySongsByArtistName() in the SongRepository class">
-      <created>1669811422416</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1669811422416</updated>
-    </task>
-    <task id="LOCAL-00026" summary="created class PlaylistRepository.java inside repository package">
-      <created>1669811529478</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1669811529478</updated>
-    </task>
-    <task id="LOCAL-00027" summary="added fields in the PlaylistRepository class">
-      <created>1669811571011</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1669811571011</updated>
     </task>
     <task id="LOCAL-00028" summary="added a no-arguments constructor in the SongRepository class">
       <created>1669811720521</created>
@@ -493,7 +462,35 @@
       <option name="project" value="LOCAL" />
       <updated>1670062030654</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="refactored givenSongNameThenReturnSongRecord() to givenSongNameThenReturnSongRecordByName() in the SongRepositoryTest class">
+      <created>1670062162882</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1670062162882</updated>
+    </task>
+    <task id="LOCAL-00074" summary="modified toString() of the Song class to return data in tabular format">
+      <created>1670062299794</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1670062299794</updated>
+    </task>
+    <task id="LOCAL-00075" summary="created PlaylistRepositoryTest.java class">
+      <created>1670062367057</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1670062367057</updated>
+    </task>
+    <task id="LOCAL-00076" summary="added fields to the PlaylistRepositoryTest class">
+      <created>1670062413573</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1670062413573</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -508,10 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added method getSongsFromPlaylist() of the PlaylistRepository class" />
-    <MESSAGE value="corrected datatype of parameter in  getSongBySerialNumber() of the SongRepository class" />
-    <MESSAGE value="corrected name of the column in the query inside getSongBySerialNumber() of the SongRepository class" />
-    <MESSAGE value="modified displayPlaylistSongs() and removed getSongsFromPlaylist() method of the PlaylistRepository class" />
     <MESSAGE value="modified main() to be menu-driven" />
     <MESSAGE value="modified getSongBySerialNumbe() and getSongByName()" />
     <MESSAGE value="modified play() method and removed stop() method in MusicPlayerService class" />
@@ -533,7 +526,11 @@
     <MESSAGE value="added givenArtistNameThenReturnSongRecordsByArtistNameNotEquals() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongIdThenReturnSongRecordByIdNotEquals() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongNameThenReturnSongRecordByNameNotEquals() to the SongRepositoryTest class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added givenSongNameThenReturnSongRecordByNameNotEquals() to the SongRepositoryTest class" />
+    <MESSAGE value="refactored givenSongNameThenReturnSongRecord() to givenSongNameThenReturnSongRecordByName() in the SongRepositoryTest class" />
+    <MESSAGE value="modified toString() of the Song class to return data in tabular format" />
+    <MESSAGE value="created PlaylistRepositoryTest.java class" />
+    <MESSAGE value="added fields to the PlaylistRepositoryTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fields to the PlaylistRepositoryTest class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
