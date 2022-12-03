@@ -6,6 +6,7 @@
 
 import com.niit.jdp.repository.SongRepository;
 import com.niit.jdp.service.DatabaseService;
+import org.junit.After;
 import org.junit.Before;
 
 import java.sql.Connection;
@@ -22,4 +23,13 @@ public class SongRepositoryTest {
         connection = databaseService.getConnection();
         songRepository = new SongRepository();
     }
+
+    @After
+    public void tearDown() {
+        databaseService = null;
+        songRepository = null;
+        connection = null;
+    }
+
+
 }
