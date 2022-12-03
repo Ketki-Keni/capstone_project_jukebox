@@ -50,5 +50,9 @@ public class SongRepositoryTest {
         assertEquals(expected, songList.get(0));
     }
 
-
+    @Test
+    public void givenGenreThenReturnSongRecordsByGenre() {
+        List<Song> output = songRepository.displaySongsByGenre("game ost");
+        assertEquals("game ost", output.get(0).getGenre());
+    }
 }
