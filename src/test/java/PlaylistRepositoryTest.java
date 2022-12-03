@@ -4,6 +4,7 @@
  * Created with : IntelliJ IDEA Community Edition
  */
 
+import com.niit.jdp.model.Playlist;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.repository.PlaylistRepository;
 import com.niit.jdp.service.DatabaseService;
@@ -40,5 +41,11 @@ public class PlaylistRepositoryTest {
     public void givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist() throws SQLException {
         List<Song> playlists = playlistRepository.displayPlaylistSongs(11);
         assertEquals(6, playlists.get(0).getSerialNumber());
+    }
+
+    @Test
+    public void givenPlaylistNameThenCreatePlaylist() throws SQLException {
+        Playlist playlist = playlistRepository.createPlaylist("Rock");
+        assertEquals("Rock", playlist.getName());
     }
 }
