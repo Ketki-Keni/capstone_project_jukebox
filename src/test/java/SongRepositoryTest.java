@@ -16,6 +16,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class SongRepositoryTest {
     SongRepository songRepository;
@@ -41,6 +42,12 @@ public class SongRepositoryTest {
     public void givenSongsDatabaseThenReturnNumberOfSongRecords() {
         songList = songRepository.displayAllSongs();
         assertEquals(9, songList.size());
+    }
+
+    @Test
+    public void givenSongsDatabaseThenReturnNumberOfSongRecordsNotEquals() {
+        songList = songRepository.displayAllSongs();
+        assertNotEquals(10, songList.size());
     }
 
     @Test
