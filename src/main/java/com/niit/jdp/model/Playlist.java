@@ -48,11 +48,7 @@ public class Playlist {
 
     @Override
     public String toString() {
-        return "Playlist{" +
-                "songList=" + songList +
-                ", playlistNumber=" + playlistNumber +
-                ", name='" + name + '\'' +
-                '}';
+        return String.format("%s\t%-20s", playlistNumber, name);
     }
 
     @Override

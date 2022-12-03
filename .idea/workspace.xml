@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added givenPlaylistNameThenCreatePlaylist() to the PlaylistRepositoryTest class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals() to the PlaylistRepositoryTest class">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,34 +143,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00032" summary="added a song to songs folder inside resources">
-      <created>1669876546742</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1669876546742</updated>
-    </task>
-    <task id="LOCAL-00033" summary="completed displayAllSongs() method of the SongRepository class">
-      <created>1669886453813</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1669886453813</updated>
-    </task>
-    <task id="LOCAL-00034" summary="called displayAllSongs method of songRepository class inside main()">
-      <created>1669886615042</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1669886615042</updated>
-    </task>
-    <task id="LOCAL-00035" summary="completed displaySongByName() method of the SongRepository class">
-      <created>1669887989892</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1669887989892</updated>
     </task>
     <task id="LOCAL-00036" summary="called displaySongByName method of songRepository class inside main()">
       <created>1669889001226</created>
@@ -488,7 +459,35 @@
       <option name="project" value="LOCAL" />
       <updated>1670064157569</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="added givenSongIdsThenAddSongsToPlaylist() to the PlaylistRepositoryTest class">
+      <created>1670064975511</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1670064975511</updated>
+    </task>
+    <task id="LOCAL-00082" summary="added givenSongIdsThenAddSongsToPlaylistNotEquals() to the PlaylistRepositoryTest class">
+      <created>1670065062712</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1670065062712</updated>
+    </task>
+    <task id="LOCAL-00083" summary="added givenPlaylistNameThenCreatePlaylistNotEquals() to the PlaylistRepositoryTest class">
+      <created>1670065128146</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1670065128146</updated>
+    </task>
+    <task id="LOCAL-00084" summary="added givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals() to the PlaylistRepositoryTest class">
+      <created>1670065205091</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1670065205091</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -503,10 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modified main() method,&#10;created object of musicPlayerService class and called play() method" />
-    <MESSAGE value="added JUnit 5 dependency in the pom.xml" />
-    <MESSAGE value="created SongRepositoryTest.java class" />
-    <MESSAGE value="added fields to the SongRepositoryTest class" />
     <MESSAGE value="added setUp() to the SongRepositoryTest class" />
     <MESSAGE value="added tearDown() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongsDatabaseThenReturnNumberOfSongRecords() to the SongRepositoryTest class" />
@@ -528,7 +523,11 @@
     <MESSAGE value="added tearDown() to the PlaylistRepositoryTest class" />
     <MESSAGE value="added givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist() to the PlaylistRepositoryTest class" />
     <MESSAGE value="added givenPlaylistNameThenCreatePlaylist() to the PlaylistRepositoryTest class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added givenPlaylistNameThenCreatePlaylist() to the PlaylistRepositoryTest class" />
+    <MESSAGE value="added givenSongIdsThenAddSongsToPlaylist() to the PlaylistRepositoryTest class" />
+    <MESSAGE value="added givenSongIdsThenAddSongsToPlaylistNotEquals() to the PlaylistRepositoryTest class" />
+    <MESSAGE value="added givenPlaylistNameThenCreatePlaylistNotEquals() to the PlaylistRepositoryTest class" />
+    <MESSAGE value="added givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals() to the PlaylistRepositoryTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals() to the PlaylistRepositoryTest class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
