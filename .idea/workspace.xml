@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added JUnit 5 dependency in the pom.xml">
-      <change afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="created SongRepositoryTest.java class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,13 +140,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00009" summary="added an override to toString(), equals() and hashCode() methods">
-      <created>1669808733951</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1669808733951</updated>
     </task>
     <task id="LOCAL-00010" summary="created class Playlist.java inside model package">
       <created>1669808789792</created>
@@ -488,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670045364890</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="created SongRepositoryTest.java class">
+      <created>1670057421209</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1670057421209</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -503,7 +499,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="called displayAllSongs method of songRepository class inside main()" />
     <MESSAGE value="completed displaySongByName() method of the SongRepository class" />
     <MESSAGE value="called displaySongByName method of songRepository class inside main()" />
     <MESSAGE value="added new fields in the Song class" />
@@ -528,7 +523,8 @@
     <MESSAGE value="modified play() method and removed stop() in MusicPlayerService" />
     <MESSAGE value="modified main() method,&#10;created object of musicPlayerService class and called play() method" />
     <MESSAGE value="added JUnit 5 dependency in the pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added JUnit 5 dependency in the pom.xml" />
+    <MESSAGE value="created SongRepositoryTest.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="created SongRepositoryTest.java class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

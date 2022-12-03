@@ -4,6 +4,13 @@
  * Created with : IntelliJ IDEA Community Edition
  */
 
-public class SongRepositoryTest {
+import com.niit.jdp.repository.SongRepository;
+import com.niit.jdp.service.DatabaseService;
 
+import java.sql.Connection;
+
+public class SongRepositoryTest {
+    SongRepository songRepository;
+    DatabaseService databaseService;
+    Connection connection;
 }
