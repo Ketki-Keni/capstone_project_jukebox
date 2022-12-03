@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added setUp() to the SongRepositoryTest class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added givenGenreThenReturnSongRecordsByGenre() to the SongRepositoryTest class">
       <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,34 +142,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00012" summary="added a no-arguments and a parameterized constructor in the Playlist class">
-      <created>1669809343769</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1669809343769</updated>
-    </task>
-    <task id="LOCAL-00013" summary="added getter and setter for all fields in the Playlist class">
-      <created>1669809399600</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1669809399600</updated>
-    </task>
-    <task id="LOCAL-00014" summary="added an override to toString(), equals() and hashCode() methods">
-      <created>1669809433245</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1669809433245</updated>
-    </task>
-    <task id="LOCAL-00015" summary="created service package and created class DatabaseService.java inside service package">
-      <created>1669809597772</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1669809597772</updated>
     </task>
     <task id="LOCAL-00016" summary="added private fields in the DatabaseService class">
       <created>1669809750046</created>
@@ -486,7 +458,35 @@
       <option name="project" value="LOCAL" />
       <updated>1670057767242</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="added tearDown() to the SongRepositoryTest class">
+      <created>1670057909282</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1670057909282</updated>
+    </task>
+    <task id="LOCAL-00062" summary="added givenSongsDatabaseThenReturnNumberOfSongRecords() to the SongRepositoryTest class">
+      <created>1670058036701</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1670058036701</updated>
+    </task>
+    <task id="LOCAL-00063" summary="added givenSongsDatabaseThenReturnSongRecords() to the SongRepositoryTest class">
+      <created>1670058114521</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1670058114521</updated>
+    </task>
+    <task id="LOCAL-00064" summary="added givenGenreThenReturnSongRecordsByGenre() to the SongRepositoryTest class">
+      <created>1670058173144</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1670058173144</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -501,10 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added new fields in the Song class" />
-    <MESSAGE value="made changes in displayAllSongs and displaySongByName methods in the SongRepository class" />
-    <MESSAGE value="initialised musicPlayerService object in the constructor&#10;called play method inside displaySongByName" />
-    <MESSAGE value="declared and initialised Scanner class instance&#10;modified main() to get song name" />
     <MESSAGE value="completed displaySongsByGenre() method of the SongRepository class" />
     <MESSAGE value="refactored displaySongByName() method name to getSongByName()" />
     <MESSAGE value="added method getSongBySerialNumber() to the SongRepository class" />
@@ -526,7 +522,11 @@
     <MESSAGE value="created SongRepositoryTest.java class" />
     <MESSAGE value="added fields to the SongRepositoryTest class" />
     <MESSAGE value="added setUp() to the SongRepositoryTest class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added setUp() to the SongRepositoryTest class" />
+    <MESSAGE value="added tearDown() to the SongRepositoryTest class" />
+    <MESSAGE value="added givenSongsDatabaseThenReturnNumberOfSongRecords() to the SongRepositoryTest class" />
+    <MESSAGE value="added givenSongsDatabaseThenReturnSongRecords() to the SongRepositoryTest class" />
+    <MESSAGE value="added givenGenreThenReturnSongRecordsByGenre() to the SongRepositoryTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added givenGenreThenReturnSongRecordsByGenre() to the SongRepositoryTest class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
