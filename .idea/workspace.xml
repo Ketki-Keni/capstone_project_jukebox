@@ -63,7 +63,7 @@
       <recent name="C:\Users\anken\IdeaProjects\capstone_project_jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SongRepositoryTest.givenSongsDatabaseThenReturnSongRecordsAsObjectofSongRepository">
+  <component name="RunManager" selected="JUnit.SongRepositoryTest.givenSongsDatabaseThenReturnNumberOfSongRecords">
     <configuration name="SongRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone_project_jukebox" />
       <option name="PACKAGE_NAME" value="" />
@@ -83,21 +83,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongRepositoryTest.givenGenreThenReturnSongRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capstone_project_jukebox" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
-      <option name="METHOD_NAME" value="givenGenreThenReturnSongRecords" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SongRepositoryTest.givenSongNameThenReturnSongRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone_project_jukebox" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
       <option name="METHOD_NAME" value="givenSongNameThenReturnSongRecords" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongRepositoryTest.givenSongsDatabaseThenReturnNumberOfSongRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_project_jukebox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
+      <option name="METHOD_NAME" value="givenSongsDatabaseThenReturnNumberOfSongRecords" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SongRepositoryTest.givenSongsDatabaseThenReturnNumberOfSongRecords" />
         <item itemvalue="JUnit.SongRepositoryTest.givenSongsDatabaseThenReturnSongRecordsAsObjectofSongRepository" />
         <item itemvalue="JUnit.SongRepositoryTest" />
         <item itemvalue="JUnit.SongRepositoryTest.givenArtistNameThenReturnSongRecordsByArtistName" />
         <item itemvalue="JUnit.SongRepositoryTest.givenSongNameThenReturnSongRecords" />
-        <item itemvalue="JUnit.SongRepositoryTest.givenGenreThenReturnSongRecords" />
       </list>
     </recent_temporary>
   </component>

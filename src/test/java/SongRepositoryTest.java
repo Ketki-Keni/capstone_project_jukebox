@@ -42,4 +42,13 @@ public class SongRepositoryTest {
         songList = songRepository.displayAllSongs();
         assertEquals(9, songList.size());
     }
+
+    @Test
+    public void givenSongsDatabaseThenReturnSongRecords() {
+        Song expected = new Song(1, "Genshin Impact Main Theme", 1.46, "game ost", "Yu-Peng Chen", "The Wind and the Star Traveler");
+        songList = songRepository.displayAllSongs();
+        assertEquals(expected, songList.get(0));
+    }
+
+
 }
