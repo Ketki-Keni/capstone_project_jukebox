@@ -55,4 +55,10 @@ public class SongRepositoryTest {
         List<Song> output = songRepository.displaySongsByGenre("game ost");
         assertEquals("game ost", output.get(0).getGenre());
     }
+
+    @Test
+    public void givenArtistNameThenReturnSongRecordsByArtistName() {
+        List<Song> output = songRepository.displaySongsByArtistName("Skrillex");
+        assertEquals("Skrillex", output.get(0).getArtistName());
+    }
 }
