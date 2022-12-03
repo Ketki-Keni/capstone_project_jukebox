@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added fields to the PlaylistRepositoryTest class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added tearDown() to the PlaylistRepositoryTest class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,16 +64,23 @@
       <recent name="C:\Users\anken\IdeaProjects\capstone_project_jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niit.jdp.Main" />
+  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist">
+    <configuration name="PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone_project_jukebox" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niit.jdp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
+      <option name="METHOD_NAME" value="givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistRepositoryTest.givenSongsDatabaseThenReturnSongRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_project_jukebox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
+      <option name="METHOD_NAME" value="givenSongsDatabaseThenReturnSongRecords" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -82,16 +90,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
       <option name="METHOD_NAME" value="givenArtistNameThenReturnSongRecordsByArtistNameNotEquals" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SongRepositoryTest.givenGenreThenReturnSongRecordsByGenreNotEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capstone_project_jukebox" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
-      <option name="METHOD_NAME" value="givenGenreThenReturnSongRecordsByGenreNotEquals" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist" />
+        <item itemvalue="JUnit.PlaylistRepositoryTest.givenSongsDatabaseThenReturnSongRecords" />
         <item itemvalue="JUnit.SongRepositoryTest.givenSongNameThenReturnSongRecordByNameNotEquals" />
         <item itemvalue="JUnit.SongRepositoryTest.givenSongIdThenReturnSongRecordByIdNotEquals" />
         <item itemvalue="JUnit.SongRepositoryTest.givenArtistNameThenReturnSongRecordsByArtistNameNotEquals" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.SongRepositoryTest.givenGenreThenReturnSongRecordsByGenreNotEquals" />
       </list>
     </recent_temporary>
   </component>
@@ -146,20 +144,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00028" summary="added a no-arguments constructor in the SongRepository class">
-      <created>1669811720521</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1669811720521</updated>
-    </task>
-    <task id="LOCAL-00029" summary="added method signature for addSong() in the PlaylistRepository class">
-      <created>1669811850030</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1669811850030</updated>
     </task>
     <task id="LOCAL-00030" summary="added method signature for createPlaylist() in the PlaylistRepository class">
       <created>1669811945179</created>
@@ -490,7 +474,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670062413573</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="added setUp() to the PlaylistRepositoryTest class">
+      <created>1670062505601</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1670062505601</updated>
+    </task>
+    <task id="LOCAL-00078" summary="added tearDown() to the PlaylistRepositoryTest class">
+      <created>1670062541583</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1670062541583</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -505,8 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modified main() to be menu-driven" />
-    <MESSAGE value="modified getSongBySerialNumbe() and getSongByName()" />
     <MESSAGE value="modified play() method and removed stop() method in MusicPlayerService class" />
     <MESSAGE value="modified play() method and removed stop() in MusicPlayerService" />
     <MESSAGE value="modified main() method,&#10;created object of musicPlayerService class and called play() method" />
@@ -530,7 +526,9 @@
     <MESSAGE value="modified toString() of the Song class to return data in tabular format" />
     <MESSAGE value="created PlaylistRepositoryTest.java class" />
     <MESSAGE value="added fields to the PlaylistRepositoryTest class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fields to the PlaylistRepositoryTest class" />
+    <MESSAGE value="added setUp() to the PlaylistRepositoryTest class" />
+    <MESSAGE value="added tearDown() to the PlaylistRepositoryTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tearDown() to the PlaylistRepositoryTest class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

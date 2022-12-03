@@ -4,16 +4,21 @@
  * Created with : IntelliJ IDEA Community Edition
  */
 
-import com.niit.jdp.repository.SongRepository;
+import com.niit.jdp.model.Song;
+import com.niit.jdp.repository.PlaylistRepository;
 import com.niit.jdp.service.DatabaseService;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class PlaylistRepositoryTest {
-    SongRepository songRepository;
+    PlaylistRepository playlistRepository;
     DatabaseService databaseService;
     Connection connection;
 
@@ -21,13 +26,19 @@ public class PlaylistRepositoryTest {
     public void setUp() throws SQLException {
         databaseService = new DatabaseService();
         connection = databaseService.getConnection();
-        songRepository = new SongRepository();
+        playlistRepository = new PlaylistRepository();
     }
 
     @After
     public void tearDown() {
         databaseService = null;
-        songRepository = null;
+        playlistRepository = null;
         connection = null;
+    }
+
+    @Test
+    public void givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist() throws SQLException {
+        List<Song> playlists = playlistRepository.displayPlaylistSongs(11);
+        assertEquals(6, playlists.get(0).getSerialNumber());
     }
 }
