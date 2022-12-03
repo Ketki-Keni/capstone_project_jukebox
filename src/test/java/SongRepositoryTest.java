@@ -89,6 +89,12 @@ public class SongRepositoryTest {
     }
 
     @Test
+    public void givenSongIdThenReturnSongRecordByIdNotEquals() {
+        Song actual = songRepository.getSongBySerialNumber(1);
+        assertNotEquals(2, actual.getSerialNumber());
+    }
+
+    @Test
     public void givenSongNameThenReturnSongRecord() {
         Song actual = songRepository.getSongByName("Demons");
         assertEquals("Demons", actual.getName());
