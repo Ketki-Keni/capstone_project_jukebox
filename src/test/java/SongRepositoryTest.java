@@ -99,4 +99,10 @@ public class SongRepositoryTest {
         Song actual = songRepository.getSongByName("Demons");
         assertEquals("Demons", actual.getName());
     }
+
+    @Test
+    public void givenSongNameThenReturnSongRecordByNameNotEquals() {
+        Song actual = songRepository.getSongByName("Demons");
+        assertNotEquals("Bones", actual.getName());
+    }
 }
