@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added givenSongIdThenReturnSongRecordById() to the SongRepositoryTest class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added givenSongsDatabaseThenReturnNumberOfSongRecordsNotEquals() to the SongRepositoryTest class">
       <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +63,17 @@
       <recent name="C:\Users\anken\IdeaProjects\capstone_project_jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SongRepositoryTest.givenSongsDatabaseThenReturnNumberOfSongRecordsNotEquals">
+  <component name="RunManager" selected="JUnit.SongRepositoryTest.givenGenreThenReturnSongRecordsByGenreNotEquals">
+    <configuration name="SongRepositoryTest.givenGenreThenReturnSongRecordsByGenreNotEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_project_jukebox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
+      <option name="METHOD_NAME" value="givenGenreThenReturnSongRecordsByGenreNotEquals" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SongRepositoryTest.givenSongIdThenReturnSongRecordById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone_project_jukebox" />
       <option name="PACKAGE_NAME" value="" />
@@ -105,16 +114,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongRepositoryTest.givenSongsDatabaseThenReturnSongRecordsAsObjectofSongRepository" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capstone_project_jukebox" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
-      <option name="METHOD_NAME" value="givenSongsDatabaseThenReturnSongRecordsAsObjectofSongRepository" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SongRepositoryTest.givenGenreThenReturnSongRecordsByGenreNotEquals" />
         <item itemvalue="JUnit.SongRepositoryTest.givenSongsDatabaseThenReturnNumberOfSongRecordsNotEquals" />
         <item itemvalue="JUnit.SongRepositoryTest.givenSongIdThenReturnSongRecordById" />
         <item itemvalue="JUnit.SongRepositoryTest.givenSongNameThenReturnSongRecordById" />
         <item itemvalue="JUnit.SongRepositoryTest.givenSongsDatabaseThenReturnNumberOfSongRecords" />
-        <item itemvalue="JUnit.SongRepositoryTest.givenSongsDatabaseThenReturnSongRecordsAsObjectofSongRepository" />
       </list>
     </recent_temporary>
   </component>
@@ -144,13 +143,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00019" summary="created class MusicPlayerService.java inside service package">
-      <created>1669810275682</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1669810275682</updated>
     </task>
     <task id="LOCAL-00020" summary="created method signature for play() and stop() methods in the MusicPlayerService class">
       <created>1669810616307</created>
@@ -488,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670058360202</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="added givenSongsDatabaseThenReturnNumberOfSongRecordsNotEquals() to the SongRepositoryTest class">
+      <created>1670060094438</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1670060094438</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -503,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="completed methods displayPlaylistSongs() and createPlaylist()" />
     <MESSAGE value="made changes in DatabaseService class" />
     <MESSAGE value="made changes in Playlist class" />
     <MESSAGE value="completed method createPlaylist() of the PlaylistRepository class" />
@@ -528,7 +526,8 @@
     <MESSAGE value="added givenArtistNameThenReturnSongRecordsByArtistName() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongNameThenReturnSongRecord() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongIdThenReturnSongRecordById() to the SongRepositoryTest class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added givenSongIdThenReturnSongRecordById() to the SongRepositoryTest class" />
+    <MESSAGE value="added givenSongsDatabaseThenReturnNumberOfSongRecordsNotEquals() to the SongRepositoryTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added givenSongsDatabaseThenReturnNumberOfSongRecordsNotEquals() to the SongRepositoryTest class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
