@@ -63,6 +63,12 @@ public class SongRepositoryTest {
     }
 
     @Test
+    public void givenSongIdThenReturnSongRecordById() {
+        Song actual = songRepository.getSongBySerialNumber(1);
+        assertEquals(1, actual.getSerialNumber());
+    }
+
+    @Test
     public void givenSongNameThenReturnSongRecord() {
         Song actual = songRepository.getSongByName("Demons");
         assertEquals("Demons", actual.getName());
