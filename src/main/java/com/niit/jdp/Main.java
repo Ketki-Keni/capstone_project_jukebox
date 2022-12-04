@@ -1,5 +1,6 @@
 package com.niit.jdp;
 
+import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Playlist;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.repository.PlaylistRepository;
@@ -25,43 +26,45 @@ public class Main {
             }
             String songName;
             int option;
+
             do {
-                System.out.println("\n--------- \nMenu \n--------- \n1 - search for a song by genre \n2 - search for a song by Artist's name " +
-                        "\n3 - search for a song by name and play \n4 - create playlist \n5 - select a playlist and add songs " +
-                        "\n6 - View playlist \n7 - Exit \nSelect an option: ");
+                System.out.println("\n--------- \nMenu \n--------- \n1 - Search for a song by genre \n2 - Search for a song by Artist's name " +
+                        "\n3 - Search for a song by name and play \n4 - Create playlist \n5 - Select a playlist and add songs " +
+                        "\n6 - View playlist \n7 - Exit");
+                System.out.print("Select an option: ");
                 option = scanner.nextInt();
                 scanner.nextLine();
                 switch (option) {
                     case 1:
-                        System.out.println("Enter the genre:");
-                        String genre = scanner.nextLine();
+                        System.out.print("Enter the genre: ");
+                        String genre = scanner.next();
                         List<Song> songListByGenre = songRepository.displaySongsByGenre(genre);
                         for (Song songs : songListByGenre) {
                             System.out.println(songs);
                         }
-                        System.out.println("Enter the song name to play the song:");
-                        songName = scanner.nextLine();
+                        System.out.print("Enter the song name to play the song: ");
+                        songName = scanner.next();
                         System.out.println(songRepository.getSongByName(songName));
                         musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
-                        System.out.println("Enter 1 - pause, 2 - resume, 3 - stop: ");
+                        System.out.print("Enter 1 - pause, 2 - resume, 3 - stop: ");
                         musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
                         break;
                     case 2:
-                        System.out.println("Enter the name of the artist:");
-                        String artistName = scanner.nextLine();
+                        System.out.print("Enter the name of the artist: ");
+                        String artistName = scanner.next();
                         List<Song> songListByArtistName = songRepository.displaySongsByArtistName(artistName);
                         for (Song songs : songListByArtistName) {
                             System.out.println(songs);
                         }
-                        System.out.println("Enter the song name to play the song:");
-                        songName = scanner.nextLine();
+                        System.out.print("Enter the song name to play the song: ");
+                        songName = scanner.next();
                         System.out.println(songRepository.getSongByName(songName));
-                        System.out.println("Enter 1 - pause, 2 - resume, 3 - stop: ");
+
                         musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
                         break;
                     case 3:
                         System.out.println("Enter the song name to play the song:");
-                        songName = scanner.nextLine();
+                        songName = scanner.next();
                         System.out.println(songRepository.getSongByName(songName));
                         System.out.println(songRepository.getSongByName(songName).getSongPath());
                         System.out.println("Enter 1 - pause, 2 - resume, 3 - stop: ");
@@ -69,7 +72,7 @@ public class Main {
                         break;
                     case 4:
                         System.out.println("Enter the name of the playlist to be created: ");
-                        String playlistName = scanner.nextLine();
+                        String playlistName = scanner.next();
                         Playlist playlist = playlistRepository.createPlaylist(playlistName);
                         System.out.println("Your playlist has been created with id: " + playlist.getPlaylistNumber());
                         break;
@@ -103,8 +106,9 @@ public class Main {
                         break;
                 }
             } while (option <= 6 && option >= 1);
-        } catch (SQLException exception) {
+        } catch (SQLException | SongNotFoundException exception) {
             exception.printStackTrace();
         }
+
     }
 }
