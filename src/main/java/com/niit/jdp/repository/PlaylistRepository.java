@@ -6,6 +6,7 @@
 
 package com.niit.jdp.repository;
 
+import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Playlist;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.service.DatabaseService;
@@ -26,7 +27,7 @@ public class PlaylistRepository {
         musicPlayerService = new MusicPlayerService();
     }
 
-    public List<Song> displayPlaylistSongs(int playlistId) throws SQLException {
+    public List<Song> displayPlaylistSongs(int playlistId) throws SQLException, SongNotFoundException {
         List<Song> songList = new ArrayList<>();
         String query = "SELECT * FROM `jukebox`.`playlist` WHERE `Playlist_number` = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(query);

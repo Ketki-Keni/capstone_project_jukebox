@@ -4,6 +4,7 @@
  * Created with : IntelliJ IDEA Community Edition
  */
 
+import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Playlist;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.repository.PlaylistRepository;
@@ -16,8 +17,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 
 public class PlaylistRepositoryTest {
     PlaylistRepository playlistRepository;
@@ -39,13 +39,13 @@ public class PlaylistRepositoryTest {
     }
 
     @Test
-    public void givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist() throws SQLException {
+    public void givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist() throws SQLException, SongNotFoundException {
         List<Song> playlists = playlistRepository.displayPlaylistSongs(11);
         assertEquals(6, playlists.get(0).getSerialNumber());
     }
 
     @Test
-    public void givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals() throws SQLException {
+    public void givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals() throws SQLException, SongNotFoundException {
         List<Song> playlists = playlistRepository.displayPlaylistSongs(11);
         assertNotEquals(5, playlists.get(0).getSerialNumber());
     }
@@ -65,7 +65,7 @@ public class PlaylistRepositoryTest {
     @Test
     public void givenSongIdsThenAddSongsToPlaylist() throws SQLException {
         boolean addSong = playlistRepository.addSong(11, "2,3");
-        assertEquals(true, addSong);
+        assertTrue(addSong);
     }
 
     @Test
