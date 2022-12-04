@@ -1,5 +1,6 @@
 package com.niit.jdp;
 
+import com.niit.jdp.exception.GenreNotFoundException;
 import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Playlist;
 import com.niit.jdp.model.Song;
@@ -118,7 +119,7 @@ public class Main {
                         break;
                 }
             } while (option <= 6 && option >= 1);
-        } catch (SQLException | SongNotFoundException exception) {
+        } catch (SQLException | SongNotFoundException | GenreNotFoundException exception) {
             exception.printStackTrace();
         }
 

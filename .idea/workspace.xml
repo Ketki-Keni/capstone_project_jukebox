@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="called displayAllPlaylists() method inside main().&#10;modified main() method.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exception/GenreNotFoundException.java" afterDir="false" />
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added constructor to the GenreNotFoundException class">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,20 +146,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00044" summary="completed methods displayPlaylistSongs() and createPlaylist()">
-      <created>1669895212978</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1669895212978</updated>
-    </task>
-    <task id="LOCAL-00045" summary="made changes in DatabaseService class">
-      <created>1669896913545</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1669896913545</updated>
     </task>
     <task id="LOCAL-00046" summary="made changes in Playlist class">
       <created>1669912017261</created>
@@ -488,7 +476,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670167270494</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="created GenreNotFoundException.java inside exception">
+      <created>1670167656040</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1670167656040</updated>
+    </task>
+    <task id="LOCAL-00094" summary="added constructor to the GenreNotFoundException class">
+      <created>1670167786610</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1670167786610</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -503,8 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added givenSongsDatabaseThenReturnNumberOfSongRecordsNotEquals() to the SongRepositoryTest class" />
-    <MESSAGE value="added givenGenreThenReturnSongRecordsByGenreNotEquals() to the SongRepositoryTest class" />
     <MESSAGE value="added givenArtistNameThenReturnSongRecordsByArtistNameNotEquals() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongIdThenReturnSongRecordByIdNotEquals() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongNameThenReturnSongRecordByNameNotEquals() to the SongRepositoryTest class" />
@@ -528,7 +528,9 @@
     <MESSAGE value="added a SongNotFoundException for displayPlaylistSongs inside PlaylistRepository and test methods in the PlaylistRepositoryTest class" />
     <MESSAGE value="added displayAllPlaylists() method in PlaylistRepository class" />
     <MESSAGE value="called displayAllPlaylists() method inside main().&#10;modified main() method." />
-    <option name="LAST_COMMIT_MESSAGE" value="called displayAllPlaylists() method inside main().&#10;modified main() method." />
+    <MESSAGE value="created GenreNotFoundException.java inside exception package" />
+    <MESSAGE value="added constructor to the GenreNotFoundException class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added constructor to the GenreNotFoundException class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
