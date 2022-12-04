@@ -109,31 +109,33 @@ public class SongRepository {
 
     public List<Song> displaySongsByGenre(String genre) throws GenreNotFoundException {
         List<Song> songList = new ArrayList<>();
-        String selectQuery = "SELECT * FROM `jukebox`.`song` where (`genre` = ?);";
-        boolean genreAvailable = songList.contains(genre);
         if (genre == null || genre.isEmpty()) {
-            throw new GenreNotFoundException("Genre not available! Please enter correct genre.");
+            throw new GenreNotFoundException("Genre cannot be null. Please enter a genre");
         }
-        if (!genreAvailable) {
-            throw new GenreNotFoundException("Genre not available! Please enter correct genre.");
-        }
+        String selectQuery = "SELECT * FROM `jukebox`.`song` where (`genre` = ?);";
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setString(1, genre);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                int serialNumber = resultSet.getInt("serial_number");
-                String name = resultSet.getString("name");
-                double duration = resultSet.getDouble("duration");
-                String songGenre = resultSet.getString("genre");
-                String artistName = resultSet.getString("artist_name");
-                String album = resultSet.getString("album");
-                Song song = new Song(serialNumber, name, duration, songGenre, artistName, album);
-                songList.add(song);
+            if (resultSet.isBeforeFirst()) {
+                while (resultSet.next() == true) {
+                    int serialNumber = resultSet.getInt("serial_number");
+                    String name = resultSet.getString("name");
+                    double duration = resultSet.getDouble("duration");
+                    String songGenre = resultSet.getString("genre");
+                    String artistName = resultSet.getString("artist_name");
+                    String album = resultSet.getString("album");
+                    Song song = new Song(serialNumber, name, duration, songGenre, artistName, album);
+                    songList.add(song);
+                    System.out.println("SongList =" + songList);
+                }
+            } else {
+                throw new GenreNotFoundException("Genre not available! Please enter correct genre.");
             }
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
         return songList;
+
     }
 
     public List<Song> displaySongsByArtistName(String artistName) throws ArtistNameNotFoundException {
