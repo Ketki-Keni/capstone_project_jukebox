@@ -59,16 +59,21 @@ public class SongRepository {
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setInt(1, serialNumber);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                int serialNumber1 = resultSet.getInt("serial_number");
-                String songName = resultSet.getString("name");
-                double duration = resultSet.getDouble("duration");
-                String genre = resultSet.getString("genre");
-                String artistName = resultSet.getString("artist_name");
-                String album = resultSet.getString("album");
-                String songPath = resultSet.getString("song_path");
-                song = new Song(serialNumber1, songName, duration, genre, artistName, album);
-                song.setSongPath(songPath);
+            //isBeforeFirst retrieves whether the cursor is before the first row in this ResultSet object.
+            if (resultSet.isBeforeFirst()) {
+                while (resultSet.next()) {
+                    int serialNumber1 = resultSet.getInt("serial_number");
+                    String songName = resultSet.getString("name");
+                    double duration = resultSet.getDouble("duration");
+                    String genre = resultSet.getString("genre");
+                    String artistName = resultSet.getString("artist_name");
+                    String album = resultSet.getString("album");
+                    String songPath = resultSet.getString("song_path");
+                    song = new Song(serialNumber1, songName, duration, genre, artistName, album);
+                    song.setSongPath(songPath);
+                }
+            } else {
+                throw new SongNotFoundException("Id not available! Please enter correct Id.");
             }
         } catch (SQLException exception) {
             exception.printStackTrace();
@@ -77,28 +82,29 @@ public class SongRepository {
     }
 
     public Song getSongByName(String name) throws SongNotFoundException {
-        if (name.equals(null) || name.isEmpty()) {
-            throw new SongNotFoundException("Song not found! Please enter correct song name.");
+        if (name == null || name.isEmpty()) {
+            throw new SongNotFoundException("Song name cannot be null. Please enter a song name.");
         }
         String selectQuery = "SELECT * FROM `jukebox`.`song` where (`name` = ?);";
         Song song = null;
-        boolean nameAvailable = song.getName().equals(name);
-        if (!nameAvailable) {
-            throw new SongNotFoundException("Song not found! Please enter correct song name.");
-        }
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setString(1, name);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                int serialNumber = resultSet.getInt("serial_number");
-                String songName = resultSet.getString("name");
-                double duration = resultSet.getDouble("duration");
-                String genre = resultSet.getString("genre");
-                String artistName = resultSet.getString("artist_name");
-                String album = resultSet.getString("album");
-                String songPath = resultSet.getString("song_path");
-                song = new Song(serialNumber, songName, duration, genre, artistName, album);
-                song.setSongPath(songPath);
+            //isBeforeFirst retrieves whether the cursor is before the first row in this ResultSet object.
+            if (resultSet.isBeforeFirst()) {
+                while (resultSet.next()) {
+                    int serialNumber = resultSet.getInt("serial_number");
+                    String songName = resultSet.getString("name");
+                    double duration = resultSet.getDouble("duration");
+                    String genre = resultSet.getString("genre");
+                    String artistName = resultSet.getString("artist_name");
+                    String album = resultSet.getString("album");
+                    String songPath = resultSet.getString("song_path");
+                    song = new Song(serialNumber, songName, duration, genre, artistName, album);
+                    song.setSongPath(songPath);
+                }
+            } else {
+                throw new SongNotFoundException("Song not found! Please enter correct song name.");
             }
         } catch (SQLException exception) {
             exception.printStackTrace();
@@ -116,8 +122,9 @@ public class SongRepository {
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setString(1, genre);
             ResultSet resultSet = preparedStatement.executeQuery();
+            //isBeforeFirst retrieves whether the cursor is before the first row in this ResultSet object.
             if (resultSet.isBeforeFirst()) {
-                while (resultSet.next() == true) {
+                while (resultSet.next()) {
                     int serialNumber = resultSet.getInt("serial_number");
                     String name = resultSet.getString("name");
                     double duration = resultSet.getDouble("duration");
@@ -126,7 +133,6 @@ public class SongRepository {
                     String album = resultSet.getString("album");
                     Song song = new Song(serialNumber, name, duration, songGenre, artistName, album);
                     songList.add(song);
-                    System.out.println("SongList =" + songList);
                 }
             } else {
                 throw new GenreNotFoundException("Genre not available! Please enter correct genre.");
@@ -142,24 +148,25 @@ public class SongRepository {
         List<Song> songList = new ArrayList<>();
         String selectQuery = "SELECT * FROM `jukebox`.`song` where (`artist_name` = ?);";
         if (artistName == null || artistName.isEmpty()) {
-            throw new ArtistNameNotFoundException("Artist's name not found! Please enter correct Artist name.");
-        }
-        boolean artistAvailable = songList.contains(artistName);
-        if (!artistAvailable) {
-            throw new ArtistNameNotFoundException("Artist's name not found! Please enter correct Artist name.");
+            throw new ArtistNameNotFoundException("Artist's name cannot be null. Please enter the Artist name.");
         }
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setString(1, artistName);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                int serialNumber = resultSet.getInt("serial_number");
-                String name = resultSet.getString("name");
-                double duration = resultSet.getDouble("duration");
-                String songGenre = resultSet.getString("genre");
-                String artistName1 = resultSet.getString("artist_name");
-                String album = resultSet.getString("album");
-                Song song = new Song(serialNumber, name, duration, songGenre, artistName1, album);
-                songList.add(song);
+            //isBeforeFirst retrieves whether the cursor is before the first row in this ResultSet object.
+            if (resultSet.isBeforeFirst()) {
+                while (resultSet.next()) {
+                    int serialNumber = resultSet.getInt("serial_number");
+                    String name = resultSet.getString("name");
+                    double duration = resultSet.getDouble("duration");
+                    String songGenre = resultSet.getString("genre");
+                    String artistName1 = resultSet.getString("artist_name");
+                    String album = resultSet.getString("album");
+                    Song song = new Song(serialNumber, name, duration, songGenre, artistName1, album);
+                    songList.add(song);
+                }
+            } else {
+                throw new ArtistNameNotFoundException("Artist's name not found! Please enter correct Artist name.");
             }
         } catch (SQLException exception) {
             exception.printStackTrace();

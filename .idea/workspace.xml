@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="modified toString() in the playlist class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="modified displaySongsByGenre() in the SongRepository class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
@@ -145,13 +145,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00053" summary="modified main() to be menu-driven">
-      <created>1669966837156</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1669966837156</updated>
     </task>
     <task id="LOCAL-00054" summary="modified getSongBySerialNumbe() and getSongByName()">
       <created>1669975761480</created>
@@ -489,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670176151124</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="modified displaySongsByGenre() in the SongRepository class">
+      <created>1670180440474</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1670180440474</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -504,7 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added setUp() to the PlaylistRepositoryTest class" />
     <MESSAGE value="added tearDown() to the PlaylistRepositoryTest class" />
     <MESSAGE value="added givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist() to the PlaylistRepositoryTest class" />
     <MESSAGE value="added givenPlaylistNameThenCreatePlaylist() to the PlaylistRepositoryTest class" />
@@ -529,7 +528,8 @@
     <MESSAGE value="added constructor to the ArtistNameNotFoundException class" />
     <MESSAGE value="replaced SongNotFoundException with ArtistNameNotFoundException in method displaySongsByArtistName of SongRepository class" />
     <MESSAGE value="modified toString() in the playlist class" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified toString() in the playlist class" />
+    <MESSAGE value="modified displaySongsByGenre() in the SongRepository class" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified displaySongsByGenre() in the SongRepository class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
