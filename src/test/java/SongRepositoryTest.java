@@ -4,6 +4,7 @@
  * Created with : IntelliJ IDEA Community Edition
  */
 
+import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.repository.SongRepository;
 import com.niit.jdp.service.DatabaseService;
@@ -58,50 +59,51 @@ public class SongRepositoryTest {
     }
 
     @Test
-    public void givenGenreThenReturnSongRecordsByGenre() {
+
+    public void givenGenreThenReturnSongRecordsByGenre() throws SongNotFoundException {
         List<Song> output = songRepository.displaySongsByGenre("game ost");
         assertEquals("game ost", output.get(0).getGenre());
     }
 
     @Test
-    public void givenGenreThenReturnSongRecordsByGenreNotEquals() {
+    public void givenGenreThenReturnSongRecordsByGenreNotEquals() throws SongNotFoundException {
         List<Song> output = songRepository.displaySongsByGenre("game ost");
         assertNotEquals("pop rock", output.get(0).getGenre());
     }
 
 
     @Test
-    public void givenArtistNameThenReturnSongRecordsByArtistName() {
+    public void givenArtistNameThenReturnSongRecordsByArtistName() throws SongNotFoundException {
         List<Song> output = songRepository.displaySongsByArtistName("Skrillex");
         assertEquals("Skrillex", output.get(0).getArtistName());
     }
 
     @Test
-    public void givenArtistNameThenReturnSongRecordsByArtistNameNotEquals() {
+    public void givenArtistNameThenReturnSongRecordsByArtistNameNotEquals() throws SongNotFoundException {
         List<Song> output = songRepository.displaySongsByArtistName("Skrillex");
         assertNotEquals("Martin Garrix", output.get(0).getArtistName());
     }
 
     @Test
-    public void givenSongIdThenReturnSongRecordById() {
+    public void givenSongIdThenReturnSongRecordById() throws SongNotFoundException {
         Song actual = songRepository.getSongBySerialNumber(1);
         assertEquals(1, actual.getSerialNumber());
     }
 
     @Test
-    public void givenSongIdThenReturnSongRecordByIdNotEquals() {
+    public void givenSongIdThenReturnSongRecordByIdNotEquals() throws SongNotFoundException {
         Song actual = songRepository.getSongBySerialNumber(1);
         assertNotEquals(2, actual.getSerialNumber());
     }
 
     @Test
-    public void givenSongNameThenReturnSongRecordByName() {
+    public void givenSongNameThenReturnSongRecordByName() throws SongNotFoundException {
         Song actual = songRepository.getSongByName("Demons");
         assertEquals("Demons", actual.getName());
     }
 
     @Test
-    public void givenSongNameThenReturnSongRecordByNameNotEquals() {
+    public void givenSongNameThenReturnSongRecordByNameNotEquals() throws SongNotFoundException {
         Song actual = songRepository.getSongByName("Demons");
         assertNotEquals("Bones", actual.getName());
     }
