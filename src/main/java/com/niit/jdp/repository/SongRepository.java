@@ -6,6 +6,7 @@
 
 package com.niit.jdp.repository;
 
+import com.niit.jdp.exception.ArtistNameNotFoundException;
 import com.niit.jdp.exception.GenreNotFoundException;
 import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Song;
@@ -135,15 +136,15 @@ public class SongRepository {
         return songList;
     }
 
-    public List<Song> displaySongsByArtistName(String artistName) throws SongNotFoundException {
+    public List<Song> displaySongsByArtistName(String artistName) throws ArtistNameNotFoundException {
         List<Song> songList = new ArrayList<>();
         String selectQuery = "SELECT * FROM `jukebox`.`song` where (`artist_name` = ?);";
         if (artistName == null || artistName.isEmpty()) {
-            throw new SongNotFoundException("Artist's name not found! Please enter correct Artist's name.");
+            throw new ArtistNameNotFoundException("Artist's name not found! Please enter correct Artist name.");
         }
         boolean artistAvailable = songList.contains(artistName);
         if (!artistAvailable) {
-            throw new SongNotFoundException("Genre not available! Please enter correct genre.");
+            throw new ArtistNameNotFoundException("Artist's name not found! Please enter correct Artist name.");
         }
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setString(1, artistName);

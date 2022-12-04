@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added constructor to the GenreNotFoundException class">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added constructor to the ArtistNameNotFoundException class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,41 +145,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00046" summary="made changes in Playlist class">
-      <created>1669912017261</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1669912017261</updated>
-    </task>
-    <task id="LOCAL-00047" summary="completed method createPlaylist() of the PlaylistRepository class">
-      <created>1669914340243</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1669914340243</updated>
-    </task>
-    <task id="LOCAL-00048" summary="completed method addSong() of the PlaylistRepository class">
-      <created>1669916938079</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1669916938079</updated>
-    </task>
-    <task id="LOCAL-00049" summary="added method getSongsFromPlaylist() of the PlaylistRepository class">
-      <created>1669917987385</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1669917987385</updated>
-    </task>
-    <task id="LOCAL-00050" summary="corrected datatype of parameter in  getSongBySerialNumber() of the SongRepository class">
-      <created>1669951120819</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1669951120819</updated>
     </task>
     <task id="LOCAL-00051" summary="corrected name of the column in the query inside getSongBySerialNumber() of the SongRepository class">
       <created>1669954081048</created>
@@ -490,7 +454,42 @@
       <option name="project" value="LOCAL" />
       <updated>1670167786610</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="replaced SongNotFoundException with GenreNotFoundException in method displaySongsByGenre of SongRepository class">
+      <created>1670168101422</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1670168101422</updated>
+    </task>
+    <task id="LOCAL-00096" summary="added GenreNotFoundException for methods inside SongRepositoryTest class">
+      <created>1670168169205</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1670168169205</updated>
+    </task>
+    <task id="LOCAL-00097" summary="added GenreNotFoundException in the catch block of main()">
+      <created>1670168197709</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1670168197709</updated>
+    </task>
+    <task id="LOCAL-00098" summary="created ArtistNameNotFoundException.java inside exception package">
+      <created>1670168714507</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1670168714507</updated>
+    </task>
+    <task id="LOCAL-00099" summary="added constructor to the ArtistNameNotFoundException class">
+      <created>1670168911941</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1670168911941</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -505,11 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added givenArtistNameThenReturnSongRecordsByArtistNameNotEquals() to the SongRepositoryTest class" />
-    <MESSAGE value="added givenSongIdThenReturnSongRecordByIdNotEquals() to the SongRepositoryTest class" />
-    <MESSAGE value="added givenSongNameThenReturnSongRecordByNameNotEquals() to the SongRepositoryTest class" />
-    <MESSAGE value="refactored givenSongNameThenReturnSongRecord() to givenSongNameThenReturnSongRecordByName() in the SongRepositoryTest class" />
-    <MESSAGE value="modified toString() of the Song class to return data in tabular format" />
     <MESSAGE value="created PlaylistRepositoryTest.java class" />
     <MESSAGE value="added fields to the PlaylistRepositoryTest class" />
     <MESSAGE value="added setUp() to the PlaylistRepositoryTest class" />
@@ -530,7 +524,12 @@
     <MESSAGE value="called displayAllPlaylists() method inside main().&#10;modified main() method." />
     <MESSAGE value="created GenreNotFoundException.java inside exception package" />
     <MESSAGE value="added constructor to the GenreNotFoundException class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added constructor to the GenreNotFoundException class" />
+    <MESSAGE value="replaced SongNotFoundException with GenreNotFoundException in method displaySongsByGenre of SongRepository class" />
+    <MESSAGE value="added GenreNotFoundException for methods inside SongRepositoryTest class" />
+    <MESSAGE value="added GenreNotFoundException in the catch block of main()" />
+    <MESSAGE value="created ArtistNameNotFoundException.java inside exception package" />
+    <MESSAGE value="added constructor to the ArtistNameNotFoundException class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added constructor to the ArtistNameNotFoundException class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
