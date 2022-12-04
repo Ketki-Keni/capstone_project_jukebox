@@ -6,6 +6,7 @@
 
 package com.niit.jdp.repository;
 
+import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.service.DatabaseService;
 import com.niit.jdp.service.MusicPlayerService;
@@ -47,9 +48,12 @@ public class SongRepository {
         return songList;
     }
 
-    public Song getSongBySerialNumber(int serialNumber) {
+    public Song getSongBySerialNumber(int serialNumber) throws SongNotFoundException {
         String selectQuery = "SELECT * FROM `jukebox`.`song` where (`serial_number` = ?);";
         Song song = null;
+        if (serialNumber <= 0) {
+            throw new SongNotFoundException("Id not available! Please enter correct Id.");
+        }
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setInt(1, serialNumber);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -70,9 +74,16 @@ public class SongRepository {
         return song;
     }
 
-    public Song getSongByName(String name) {
+    public Song getSongByName(String name) throws SongNotFoundException {
+        if (name.equals(null) || name.isEmpty()) {
+            throw new SongNotFoundException("Song not found! Please enter correct song name.");
+        }
         String selectQuery = "SELECT * FROM `jukebox`.`song` where (`name` = ?);";
         Song song = null;
+        boolean nameAvailable = song.getName().equals(name);
+        if (!nameAvailable) {
+            throw new SongNotFoundException("Song not found! Please enter correct song name.");
+        }
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setString(1, name);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -91,12 +102,19 @@ public class SongRepository {
             exception.printStackTrace();
         }
         return song;
+
     }
 
-    public List<Song> displaySongsByGenre(String genre) {
+    public List<Song> displaySongsByGenre(String genre) throws SongNotFoundException {
         List<Song> songList = new ArrayList<>();
         String selectQuery = "SELECT * FROM `jukebox`.`song` where (`genre` = ?);";
-
+        boolean genreAvailable = songList.contains(genre);
+        if (genre == null || genre.isEmpty()) {
+            throw new SongNotFoundException("Genre not available! Please enter correct genre.");
+        }
+        if (!genreAvailable) {
+            throw new SongNotFoundException("Genre not available! Please enter correct genre.");
+        }
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setString(1, genre);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -116,10 +134,16 @@ public class SongRepository {
         return songList;
     }
 
-    public List<Song> displaySongsByArtistName(String artistName) {
+    public List<Song> displaySongsByArtistName(String artistName) throws SongNotFoundException {
         List<Song> songList = new ArrayList<>();
         String selectQuery = "SELECT * FROM `jukebox`.`song` where (`artist_name` = ?);";
-
+        if (artistName == null || artistName.isEmpty()) {
+            throw new SongNotFoundException("Artist's name not found! Please enter correct Artist's name.");
+        }
+        boolean artistAvailable = songList.contains(artistName);
+        if (!artistAvailable) {
+            throw new SongNotFoundException("Genre not available! Please enter correct genre.");
+        }
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setString(1, artistName);
             ResultSet resultSet = preparedStatement.executeQuery();

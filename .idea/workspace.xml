@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="created package exception and SongNotFoundException class inside exception package">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added a constructor inside SongNotFoundException class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exception/SongNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exception/SongNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,22 +68,25 @@
       <recent name="C:\Users\anken\IdeaProjects\capstone_project_jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.jdp.Main" />
+      <module name="capstone_project_jukebox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niit.jdp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone_project_jukebox" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
       <option name="METHOD_NAME" value="givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlaylistRepositoryTest.givenPlaylistNameThenCreatePlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capstone_project_jukebox" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
-      <option name="METHOD_NAME" value="givenPlaylistNameThenCreatePlaylist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,22 +102,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaylistRepositoryTest.givenSongIdsThenAddSongsToPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capstone_project_jukebox" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
-      <option name="METHOD_NAME" value="givenSongIdsThenAddSongsToPlaylist" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PlaylistRepositoryTest.givenSongIdsThenAddSongsToPlaylistNotEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone_project_jukebox" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
       <option name="METHOD_NAME" value="givenSongIdsThenAddSongsToPlaylistNotEquals" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistNameThenCreatePlaylistNotEquals" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenSongIdsThenAddSongsToPlaylistNotEquals" />
-        <item itemvalue="JUnit.PlaylistRepositoryTest.givenSongIdsThenAddSongsToPlaylist" />
-        <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistNameThenCreatePlaylist" />
       </list>
     </recent_temporary>
   </component>
