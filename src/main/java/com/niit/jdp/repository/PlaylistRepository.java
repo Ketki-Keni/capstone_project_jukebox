@@ -27,6 +27,22 @@ public class PlaylistRepository {
         musicPlayerService = new MusicPlayerService();
     }
 
+
+    public List<Playlist> displayAllPlaylists() throws SQLException {
+        List<Playlist> playlistDetails = new ArrayList<>();
+        String selectQuery = "SELECT `Playlist_number`,`name` FROM `jukebox`.`playlist`;";
+        try (Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery(selectQuery);
+            while (resultSet.next()) {
+                int playlistId = resultSet.getInt("Playlist_number");
+                String playlistName = resultSet.getString("name");
+                Playlist playlist = new Playlist(playlistId, playlistName);
+                playlistDetails.add(playlist);
+            }
+        }
+        return playlistDetails;
+    }
+
     public List<Song> displayPlaylistSongs(int playlistId) throws SQLException, SongNotFoundException {
         List<Song> songList = new ArrayList<>();
         String query = "SELECT * FROM `jukebox`.`playlist` WHERE `Playlist_number` = ?";
