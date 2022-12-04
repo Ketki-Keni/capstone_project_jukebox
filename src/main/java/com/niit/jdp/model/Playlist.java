@@ -48,7 +48,7 @@ public class Playlist {
 
     @Override
     public String toString() {
-        return String.format("%s\t%-20s", playlistNumber, name);
+        return String.format("%s\t%-10s\n", playlistNumber, name);
     }
 
     @Override
@@ -56,11 +56,11 @@ public class Playlist {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Playlist playlist = (Playlist) o;
-        return getPlaylistNumber() == playlist.getPlaylistNumber() && Objects.equals(getSongList(), playlist.getSongList()) && Objects.equals(getName(), playlist.getName());
+        return getPlaylistNumber() == playlist.getPlaylistNumber() && Objects.equals(getName(), playlist.getName());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getSongList(), getPlaylistNumber(), getName());
+        return Objects.hash(getPlaylistNumber(), getName());
     }
 }
