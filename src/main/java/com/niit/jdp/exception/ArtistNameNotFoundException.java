@@ -6,5 +6,8 @@
 
 package com.niit.jdp.exception;
 
-public class ArtistNameNotFoundException {
+public class ArtistNameNotFoundException extends Exception {
+    public ArtistNameNotFoundException(String message) {
+        super(message);
+    }
 }
