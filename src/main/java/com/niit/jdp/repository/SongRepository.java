@@ -6,6 +6,7 @@
 
 package com.niit.jdp.repository;
 
+import com.niit.jdp.exception.GenreNotFoundException;
 import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.service.DatabaseService;
@@ -105,15 +106,15 @@ public class SongRepository {
 
     }
 
-    public List<Song> displaySongsByGenre(String genre) throws SongNotFoundException {
+    public List<Song> displaySongsByGenre(String genre) throws GenreNotFoundException {
         List<Song> songList = new ArrayList<>();
         String selectQuery = "SELECT * FROM `jukebox`.`song` where (`genre` = ?);";
         boolean genreAvailable = songList.contains(genre);
         if (genre == null || genre.isEmpty()) {
-            throw new SongNotFoundException("Genre not available! Please enter correct genre.");
+            throw new GenreNotFoundException("Genre not available! Please enter correct genre.");
         }
         if (!genreAvailable) {
-            throw new SongNotFoundException("Genre not available! Please enter correct genre.");
+            throw new GenreNotFoundException("Genre not available! Please enter correct genre.");
         }
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setString(1, genre);
