@@ -1,0 +1,33 @@
+Index: src/main/java/com/niit/jdp/model/Playlist.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\r\n * Author : Ketki Keni\r\n * Date : 30-11-2022\r\n * Created with : IntelliJ IDEA Community Edition\r\n */\r\n\r\npackage com.niit.jdp.model;\r\n\r\nimport java.util.List;\r\nimport java.util.Objects;\r\n\r\npublic class Playlist {\r\n    List<Song> songList;\r\n    private int playlistNumber;\r\n    private String name;\r\n\r\n    public Playlist() {\r\n    }\r\n\r\n    public Playlist(int playlistNumber, String name) {\r\n        this.playlistNumber = playlistNumber;\r\n        this.name = name;\r\n    }\r\n\r\n    public List<Song> getSongList() {\r\n        return songList;\r\n    }\r\n\r\n    public void setSongList(List<Song> songList) {\r\n        this.songList = songList;\r\n    }\r\n\r\n    public int getPlaylistNumber() {\r\n        return playlistNumber;\r\n    }\r\n\r\n    public void setPlaylistNumber(int playlistNumber) {\r\n        this.playlistNumber = playlistNumber;\r\n    }\r\n\r\n    public String getName() {\r\n        return name;\r\n    }\r\n\r\n    public void setName(String name) {\r\n        this.name = name;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return String.format(\"%s\\t%-20s\", playlistNumber, name);\r\n    }\r\n\r\n    @Override\r\n    public boolean equals(Object o) {\r\n        if (this == o) return true;\r\n        if (o == null || getClass() != o.getClass()) return false;\r\n        Playlist playlist = (Playlist) o;\r\n        return getPlaylistNumber() == playlist.getPlaylistNumber() && Objects.equals(getSongList(), playlist.getSongList()) && Objects.equals(getName(), playlist.getName());\r\n    }\r\n\r\n    @Override\r\n    public int hashCode() {\r\n        return Objects.hash(getSongList(), getPlaylistNumber(), getName());\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/niit/jdp/model/Playlist.java b/src/main/java/com/niit/jdp/model/Playlist.java
+--- a/src/main/java/com/niit/jdp/model/Playlist.java	(revision 065628b3f28d1248ed2593b9d0ea2c9c29b0218b)
++++ b/src/main/java/com/niit/jdp/model/Playlist.java	(date 1670176069575)
+@@ -48,7 +48,7 @@
+ 
+     @Override
+     public String toString() {
+-        return String.format("%s\t%-20s", playlistNumber, name);
++        return String.format("%s\t%-10s\n",playlistNumber ,name);
+     }
+ 
+     @Override
+@@ -56,11 +56,11 @@
+         if (this == o) return true;
+         if (o == null || getClass() != o.getClass()) return false;
+         Playlist playlist = (Playlist) o;
+-        return getPlaylistNumber() == playlist.getPlaylistNumber() && Objects.equals(getSongList(), playlist.getSongList()) && Objects.equals(getName(), playlist.getName());
++        return getPlaylistNumber() == playlist.getPlaylistNumber() && Objects.equals(getName(), playlist.getName());
+     }
+ 
+     @Override
+     public int hashCode() {
+-        return Objects.hash(getSongList(), getPlaylistNumber(), getName());
++        return Objects.hash(getPlaylistNumber(), getName());
+     }
+ }

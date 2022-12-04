@@ -44,13 +44,13 @@ public class Main {
                     case 1:
                         //Search for a song by genre
                         System.out.print("Enter the genre: ");
-                        String genre = scanner.next();
+                        String genre = scanner.nextLine();
                         List<Song> songListByGenre = songRepository.displaySongsByGenre(genre);
                         for (Song songs : songListByGenre) {
                             System.out.println(songs);
                         }
                         System.out.print("Enter the song name to play the song: ");
-                        songName = scanner.next();
+                        songName = scanner.nextLine();
                         System.out.println(songRepository.getSongByName(songName));
                         musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
                         System.out.print("Enter 1 - pause, 2 - resume, 3 - stop: ");
@@ -59,21 +59,21 @@ public class Main {
                     case 2:
                         //Search for a song by Artist's name
                         System.out.print("Enter the name of the artist: ");
-                        String artistName = scanner.next();
+                        String artistName = scanner.nextLine();
                         List<Song> songListByArtistName = songRepository.displaySongsByArtistName(artistName);
                         for (Song songs : songListByArtistName) {
                             System.out.println(songs);
                         }
                         System.out.print("Enter the song name to play the song: ");
-                        songName = scanner.next();
+                        songName = scanner.nextLine();
                         System.out.println(songRepository.getSongByName(songName));
-
+                        System.out.print("Enter 1 - pause, 2 - resume, 3 - stop: ");
                         musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
                         break;
                     case 3:
                         //Search for a song by name and play
                         System.out.println("Enter the song name to play the song:");
-                        songName = scanner.next();
+                        songName = scanner.nextLine();
                         System.out.println(songRepository.getSongByName(songName));
                         System.out.println(songRepository.getSongByName(songName).getSongPath());
                         System.out.println("Enter 1 - pause, 2 - resume, 3 - stop: ");
@@ -82,7 +82,7 @@ public class Main {
                     case 4:
                         //Create playlist
                         System.out.println("Enter the name of the playlist to be created: ");
-                        String playlistName = scanner.next();
+                        String playlistName = scanner.nextLine();
                         Playlist playlist = playlistRepository.createPlaylist(playlistName);
                         System.out.println("Your playlist has been created with id: " + playlist.getPlaylistNumber());
                         break;
