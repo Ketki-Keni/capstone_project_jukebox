@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="modified toString() in the Playlist class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="created package exception and SongNotFoundException class inside exception package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exception/SongNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exception/SongNotFoundException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.46130952&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
@@ -63,7 +64,7 @@
       <recent name="C:\Users\anken\IdeaProjects\capstone_project_jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals">
     <configuration name="PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone_project_jukebox" />
       <option name="PACKAGE_NAME" value="" />
@@ -143,13 +144,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00037" summary="added new fields in the Song class">
-      <created>1669889304250</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1669889304250</updated>
     </task>
     <task id="LOCAL-00038" summary="made changes in displayAllSongs and displaySongByName methods in the SongRepository class">
       <created>1669889440210</created>
@@ -487,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670065795433</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="created package exception and SongNotFoundException class inside exception package">
+      <created>1670135567260</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1670135567260</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -502,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added tearDown() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongsDatabaseThenReturnNumberOfSongRecords() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongsDatabaseThenReturnSongRecords() to the SongRepositoryTest class" />
     <MESSAGE value="added givenGenreThenReturnSongRecordsByGenre() to the SongRepositoryTest class" />
@@ -527,7 +527,8 @@
     <MESSAGE value="added givenPlaylistNameThenCreatePlaylistNotEquals() to the PlaylistRepositoryTest class" />
     <MESSAGE value="added givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals() to the PlaylistRepositoryTest class" />
     <MESSAGE value="modified toString() in the Playlist class" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified toString() in the Playlist class" />
+    <MESSAGE value="created package exception and SongNotFoundException class inside exception package" />
+    <option name="LAST_COMMIT_MESSAGE" value="created package exception and SongNotFoundException class inside exception package" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
