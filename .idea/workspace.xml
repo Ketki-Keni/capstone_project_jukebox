@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added a SongNotFoundException for getSongBySerialNumber, getSongByName, displaySongsByGenre, displaySongsByArtistName inside SongRepository class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added a SongNotFoundException for displayPlaylistSongs inside PlaylistRepository and test methods in the PlaylistRepositoryTest class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,27 +146,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00039" summary="initialised musicPlayerService object in the constructor&#10;called play method inside displaySongByName">
-      <created>1669889719151</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1669889719151</updated>
-    </task>
-    <task id="LOCAL-00040" summary="declared and initialised Scanner class instance&#10;modified main() to get song name">
-      <created>1669891086190</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1669891086190</updated>
-    </task>
-    <task id="LOCAL-00041" summary="completed displaySongsByGenre() method of the SongRepository class">
-      <created>1669891404623</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1669891404623</updated>
     </task>
     <task id="LOCAL-00042" summary="refactored displaySongByName() method name to getSongByName()">
       <created>1669891944239</created>
@@ -489,7 +469,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670164492090</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="added a SongNotFoundException for methods inside SongRepositoryTest class">
+      <created>1670164619210</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1670164619210</updated>
+    </task>
+    <task id="LOCAL-00089" summary="added a SongNotFoundException in the catch block of main() method">
+      <created>1670164719708</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1670164719708</updated>
+    </task>
+    <task id="LOCAL-00090" summary="added a SongNotFoundException for displayPlaylistSongs inside PlaylistRepository and test methods in the PlaylistRepositoryTest class">
+      <created>1670164865345</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1670164865345</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -504,9 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added givenSongsDatabaseThenReturnSongRecords() to the SongRepositoryTest class" />
-    <MESSAGE value="added givenGenreThenReturnSongRecordsByGenre() to the SongRepositoryTest class" />
-    <MESSAGE value="added givenArtistNameThenReturnSongRecordsByArtistName() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongNameThenReturnSongRecord() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongIdThenReturnSongRecordById() to the SongRepositoryTest class" />
     <MESSAGE value="added givenSongsDatabaseThenReturnNumberOfSongRecordsNotEquals() to the SongRepositoryTest class" />
@@ -529,7 +527,10 @@
     <MESSAGE value="modified toString() in the Playlist class" />
     <MESSAGE value="created package exception and SongNotFoundException class inside exception package" />
     <MESSAGE value="added a SongNotFoundException for getSongBySerialNumber, getSongByName, displaySongsByGenre, displaySongsByArtistName inside SongRepository class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a SongNotFoundException for getSongBySerialNumber, getSongByName, displaySongsByGenre, displaySongsByArtistName inside SongRepository class" />
+    <MESSAGE value="added a SongNotFoundException for methods inside SongRepositoryTest class" />
+    <MESSAGE value="added a SongNotFoundException in the catch block of main() method" />
+    <MESSAGE value="added a SongNotFoundException for displayPlaylistSongs inside PlaylistRepository and test methods in the PlaylistRepositoryTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a SongNotFoundException for displayPlaylistSongs inside PlaylistRepository and test methods in the PlaylistRepositoryTest class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
