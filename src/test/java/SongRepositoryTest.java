@@ -4,6 +4,7 @@
  * Created with : IntelliJ IDEA Community Edition
  */
 
+import com.niit.jdp.exception.GenreNotFoundException;
 import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.repository.SongRepository;
@@ -60,13 +61,13 @@ public class SongRepositoryTest {
 
     @Test
 
-    public void givenGenreThenReturnSongRecordsByGenre() throws SongNotFoundException {
+    public void givenGenreThenReturnSongRecordsByGenre() throws SongNotFoundException, GenreNotFoundException {
         List<Song> output = songRepository.displaySongsByGenre("game ost");
         assertEquals("game ost", output.get(0).getGenre());
     }
 
     @Test
-    public void givenGenreThenReturnSongRecordsByGenreNotEquals() throws SongNotFoundException {
+    public void givenGenreThenReturnSongRecordsByGenreNotEquals() throws SongNotFoundException, GenreNotFoundException {
         List<Song> output = songRepository.displaySongsByGenre("game ost");
         assertNotEquals("pop rock", output.get(0).getGenre());
     }
