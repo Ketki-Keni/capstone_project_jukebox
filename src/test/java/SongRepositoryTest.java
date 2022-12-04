@@ -4,6 +4,7 @@
  * Created with : IntelliJ IDEA Community Edition
  */
 
+import com.niit.jdp.exception.ArtistNameNotFoundException;
 import com.niit.jdp.exception.GenreNotFoundException;
 import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Song;
@@ -74,13 +75,13 @@ public class SongRepositoryTest {
 
 
     @Test
-    public void givenArtistNameThenReturnSongRecordsByArtistName() throws SongNotFoundException {
+    public void givenArtistNameThenReturnSongRecordsByArtistName() throws SongNotFoundException, ArtistNameNotFoundException {
         List<Song> output = songRepository.displaySongsByArtistName("Skrillex");
         assertEquals("Skrillex", output.get(0).getArtistName());
     }
 
     @Test
-    public void givenArtistNameThenReturnSongRecordsByArtistNameNotEquals() throws SongNotFoundException {
+    public void givenArtistNameThenReturnSongRecordsByArtistNameNotEquals() throws SongNotFoundException, ArtistNameNotFoundException {
         List<Song> output = songRepository.displaySongsByArtistName("Skrillex");
         assertNotEquals("Martin Garrix", output.get(0).getArtistName());
     }

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added constructor to the ArtistNameNotFoundException class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="replaced SongNotFoundException with ArtistNameNotFoundException in method displaySongsByArtistName of SongRepository class">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,13 +144,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00051" summary="corrected name of the column in the query inside getSongBySerialNumber() of the SongRepository class">
-      <created>1669954081048</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1669954081048</updated>
     </task>
     <task id="LOCAL-00052" summary="modified displayPlaylistSongs() and removed getSongsFromPlaylist() method of the PlaylistRepository class">
       <created>1669954178508</created>
@@ -489,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670168911941</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="replaced SongNotFoundException with ArtistNameNotFoundException in method displaySongsByArtistName of SongRepository class">
+      <created>1670169058303</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1670169058303</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -504,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created PlaylistRepositoryTest.java class" />
     <MESSAGE value="added fields to the PlaylistRepositoryTest class" />
     <MESSAGE value="added setUp() to the PlaylistRepositoryTest class" />
     <MESSAGE value="added tearDown() to the PlaylistRepositoryTest class" />
@@ -529,7 +527,8 @@
     <MESSAGE value="added GenreNotFoundException in the catch block of main()" />
     <MESSAGE value="created ArtistNameNotFoundException.java inside exception package" />
     <MESSAGE value="added constructor to the ArtistNameNotFoundException class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added constructor to the ArtistNameNotFoundException class" />
+    <MESSAGE value="replaced SongNotFoundException with ArtistNameNotFoundException in method displaySongsByArtistName of SongRepository class" />
+    <option name="LAST_COMMIT_MESSAGE" value="replaced SongNotFoundException with ArtistNameNotFoundException in method displaySongsByArtistName of SongRepository class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
