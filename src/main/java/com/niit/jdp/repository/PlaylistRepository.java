@@ -6,6 +6,8 @@
 
 package com.niit.jdp.repository;
 
+import com.niit.jdp.exception.GenreNotFoundException;
+import com.niit.jdp.exception.PlaylistNotFoundException;
 import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Playlist;
 import com.niit.jdp.model.Song;
@@ -43,19 +45,23 @@ public class PlaylistRepository {
         return playlistDetails;
     }
 
-    public List<Song> displayPlaylistSongs(int playlistId) throws SQLException, SongNotFoundException {
+    public List<Song> displayPlaylistSongs(int playlistId) throws SQLException, SongNotFoundException, GenreNotFoundException, PlaylistNotFoundException {
         List<Song> songList = new ArrayList<>();
         String query = "SELECT * FROM `jukebox`.`playlist` WHERE `Playlist_number` = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setInt(1, playlistId);
         ResultSet resultSet = preparedStatement.executeQuery();
-        while (resultSet.next()) {
-            String songId = resultSet.getString("song_id");
-            String[] songsFromPlaylist = songId.split(",");
-            for (String songIds : songsFromPlaylist) {
-                Song song = new SongRepository().getSongBySerialNumber(Integer.parseInt(songIds));
-                songList.add(song);
+        if (resultSet.isBeforeFirst()) {
+            while (resultSet.next()) {
+                String songId = resultSet.getString("song_id");
+                String[] songsFromPlaylist = songId.split(",");
+                for (String songIds : songsFromPlaylist) {
+                    Song song = new SongRepository().getSongBySerialNumber(Integer.parseInt(songIds));
+                    songList.add(song);
+                }
             }
+        } else {
+            throw new PlaylistNotFoundException("Playlist not found! Please enter correct Playlist Id.");
         }
         return songList;
     }
@@ -73,19 +79,21 @@ public class PlaylistRepository {
                     playlist.setName(playlistName);
                 }
             }
-
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
         return playlist;
     }
 
-    public boolean addSong(int playlistId, String songIds) throws SQLException {
+    public boolean addSong(int playlistId, String songIds) throws SQLException, PlaylistNotFoundException {
         String updateQuery = "UPDATE `jukebox`.`playlist` SET `song_id` = ? WHERE `Playlist_number` = ?;";
         PreparedStatement preparedStatement = connection.prepareStatement(updateQuery);
         preparedStatement.setString(1, songIds);
         preparedStatement.setInt(2, playlistId);
         int result = preparedStatement.executeUpdate();
+        if (result == 0) {
+            throw new PlaylistNotFoundException("Playlist not found! Cannot add songs.");
+        }
         return result > 0;
     }
 }
