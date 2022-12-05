@@ -30,7 +30,7 @@ public class Main {
             allSongs.forEach(System.out::println);
             String songName;
             int option;
-
+            List<Playlist> playlists;
             do {
                 System.out.println("\n----------------------------- \n\t\t\tMenu \n-----------------------------" +
                         "\n1 - Search for a song by genre \n2 - Search for a song by Artist's name " +
@@ -38,6 +38,7 @@ public class Main {
                         "\n4 - Create playlist \n5 - Select a playlist and add songs " +
                         "\n6 - View playlist and select a song to play  \n7 - Exit");
                 System.out.print("Select an option: ");
+                System.out.println();
                 option = scanner.nextInt();
                 scanner.nextLine();
                 switch (option) {
@@ -50,7 +51,6 @@ public class Main {
                         System.out.print("Enter the song name to play the song: ");
                         songName = scanner.nextLine();
                         System.out.println(songRepository.getSongByName(songName));
-                        musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
                         System.out.print("Enter 1 - pause, 2 - resume, 3 - stop: ");
                         musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
                         break;
@@ -84,9 +84,10 @@ public class Main {
                         break;
                     case 5:
                         //Select a playlist and add songs
-                        System.out.println("Playlist: \n----------------");
-                        System.out.println(String.format("%s\t%-10s", "Id", "Name"));
-                        System.out.println(playlistRepository.displayAllPlaylists());
+                        System.out.println("Playlists: \n--------------");
+                        System.out.println(String.format("%s\t%-10s", "Id", "Name\n--------------"));
+                        playlists = playlistRepository.displayAllPlaylists();
+                        playlists.forEach(System.out::println);
                         System.out.println("Enter the playlist id to add songs to the Playlist: ");
                         int playlistId = scanner.nextInt();
                         scanner.nextLine();
@@ -101,9 +102,10 @@ public class Main {
                         break;
                     case 6:
                         //View playlist and select a song from the playlist to play
-                        System.out.println("Playlist: \n----------------");
-                        System.out.println(String.format("%s\t%-10s", "Id", "Name"));
-                        System.out.println(playlistRepository.displayAllPlaylists());
+                        System.out.println("Playlists: \n--------------");
+                        System.out.println(String.format("%s\t%-10s", "Id", "Name\n--------------"));
+                        playlists = playlistRepository.displayAllPlaylists();
+                        playlists.forEach(System.out::println);
                         System.out.print("Enter the playlist id to view songs from the playlist: ");
                         int playlistIdToGetSongsFrom = scanner.nextInt();
                         List<Song> songsFromPlaylist = playlistRepository.displayPlaylistSongs(playlistIdToGetSongsFrom);
