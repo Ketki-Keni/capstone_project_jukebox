@@ -39,6 +39,18 @@ public class PlaylistRepositoryTest {
     }
 
     @Test
+    public void givenPlaylistDatabaseThenPlaylistRecords() throws SQLException {
+        List<Playlist> playlists = playlistRepository.displayAllPlaylists();
+        assertEquals(1, playlists.get(0).getPlaylistNumber());
+    }
+
+    @Test
+    public void givenPlaylistDatabaseThenPlaylistRecordsNotEquals() throws SQLException {
+        List<Playlist> playlists = playlistRepository.displayAllPlaylists();
+        assertNotEquals(2, playlists.get(0).getPlaylistNumber());
+    }
+
+    @Test
     public void givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist() throws SQLException, SongNotFoundException {
         List<Song> playlists = playlistRepository.displayPlaylistSongs(1);
         assertEquals(1, playlists.get(0).getSerialNumber());
