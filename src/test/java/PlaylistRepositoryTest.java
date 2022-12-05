@@ -40,13 +40,13 @@ public class PlaylistRepositoryTest {
 
     @Test
     public void givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist() throws SQLException, SongNotFoundException {
-        List<Song> playlists = playlistRepository.displayPlaylistSongs(11);
-        assertEquals(6, playlists.get(0).getSerialNumber());
+        List<Song> playlists = playlistRepository.displayPlaylistSongs(1);
+        assertEquals(1, playlists.get(0).getSerialNumber());
     }
 
     @Test
     public void givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals() throws SQLException, SongNotFoundException {
-        List<Song> playlists = playlistRepository.displayPlaylistSongs(11);
+        List<Song> playlists = playlistRepository.displayPlaylistSongs(1);
         assertNotEquals(5, playlists.get(0).getSerialNumber());
     }
 
@@ -64,13 +64,13 @@ public class PlaylistRepositoryTest {
 
     @Test
     public void givenSongIdsThenAddSongsToPlaylist() throws SQLException {
-        boolean addSong = playlistRepository.addSong(11, "2,3");
+        boolean addSong = playlistRepository.addSong(1, "1,5,8,9");
         assertTrue(addSong);
     }
 
     @Test
     public void givenSongIdsThenAddSongsToPlaylistNotEquals() throws SQLException {
-        boolean addSong = playlistRepository.addSong(11, "2,3");
+        boolean addSong = playlistRepository.addSong(1, "1,5,8,9");
         assertNotEquals(false, addSong);
     }
 }
