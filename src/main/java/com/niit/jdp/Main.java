@@ -41,89 +41,94 @@ public class Main {
                 System.out.println();
                 option = scanner.nextInt();
                 scanner.nextLine();
-                switch (option) {
-                    case 1:
-                        //Search for a song by genre
-                        System.out.print("Enter the genre: ");
-                        String genre = scanner.nextLine();
-                        List<Song> songListByGenre = songRepository.displaySongsByGenre(genre);
-                        songListByGenre.forEach(System.out::println);
-                        System.out.print("Enter the song name to play the song: ");
-                        songName = scanner.nextLine();
-                        System.out.println(songRepository.getSongByName(songName));
-                        System.out.print("Enter 1 - pause, 2 - resume, 3 - stop: ");
-                        musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
-                        break;
-                    case 2:
-                        //Search for a song by Artist's name
-                        System.out.print("Enter the name of the artist: ");
-                        String artistName = scanner.nextLine();
-                        List<Song> songListByArtistName = songRepository.displaySongsByArtistName(artistName);
-                        songListByArtistName.forEach(System.out::println);
-                        System.out.print("Enter the song name to play the song: ");
-                        songName = scanner.nextLine();
-                        System.out.println(songRepository.getSongByName(songName));
-                        System.out.print("Enter 1 - pause, 2 - resume, 3 - stop: ");
-                        musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
-                        break;
-                    case 3:
-                        //Search for a song by name and play
-                        System.out.println("Enter the song name to play the song:");
-                        songName = scanner.nextLine();
-                        System.out.println(songRepository.getSongByName(songName));
-                        System.out.println(songRepository.getSongByName(songName).getSongPath());
-                        System.out.println("Enter 1 - pause, 2 - resume, 3 - stop: ");
-                        musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
-                        break;
-                    case 4:
-                        //Create playlist
-                        System.out.println("Enter the name of the playlist to be created: ");
-                        String playlistName = scanner.nextLine();
-                        Playlist playlist = playlistRepository.createPlaylist(playlistName);
-                        System.out.println("Your playlist has been created with id: " + playlist.getPlaylistNumber());
-                        break;
-                    case 5:
-                        //Select a playlist and add songs
-                        System.out.println("Playlists: \n--------------");
-                        System.out.println(String.format("%s\t%-10s", "Id", "Name\n--------------"));
-                        playlists = playlistRepository.displayAllPlaylists();
-                        playlists.forEach(System.out::println);
-                        System.out.println("Enter the playlist id to add songs to the Playlist: ");
-                        int playlistId = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Enter the song ids to add to the playlist separated by comma: ");
-                        String songIds = scanner.nextLine();
-                        boolean songsAdded = playlistRepository.addSong(playlistId, songIds);
-                        if (songsAdded) {
-                            System.out.println("Songs added to the playlist");
-                        } else {
-                            System.out.println("Something went wrong");
-                        }
-                        break;
-                    case 6:
-                        //View playlist and select a song from the playlist to play
-                        System.out.println("Playlists: \n--------------");
-                        System.out.println(String.format("%s\t%-10s", "Id", "Name\n--------------"));
-                        playlists = playlistRepository.displayAllPlaylists();
-                        playlists.forEach(System.out::println);
-                        System.out.print("Enter the playlist id to view songs from the playlist: ");
-                        int playlistIdToGetSongsFrom = scanner.nextInt();
-                        List<Song> songsFromPlaylist = playlistRepository.displayPlaylistSongs(playlistIdToGetSongsFrom);
-                        songsFromPlaylist.forEach(System.out::println);
-                        System.out.print("Enter the song id to play the song: ");
-                        int songId = scanner.nextInt();
-                        System.out.println(songRepository.getSongBySerialNumber(songId));
-                        System.out.println("Enter 1 - pause, 2 - resume, 3 - stop: ");
-                        musicPlayerService.play(songRepository.getSongBySerialNumber(songId).getSongPath());
-                        break;
-                    case 7:
-                        break;
-                    default:
-                        System.out.println("Invalid option selected");
+                try {
+                    switch (option) {
+                        case 1:
+                            //Search for a song by genre
+                            System.out.print("Enter the genre: ");
+                            String genre = scanner.nextLine();
+                            List<Song> songListByGenre = songRepository.displaySongsByGenre(genre);
+                            songListByGenre.forEach(System.out::println);
+                            System.out.print("Enter the song name to play the song: ");
+                            songName = scanner.nextLine();
+                            System.out.println(songRepository.getSongByName(songName));
+                            System.out.print("Enter 1 - pause, 2 - resume, 3 - stop: ");
+                            musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
+                            break;
+                        case 2:
+                            //Search for a song by Artist's name
+                            System.out.print("Enter the name of the artist: ");
+                            String artistName = scanner.nextLine();
+                            List<Song> songListByArtistName = songRepository.displaySongsByArtistName(artistName);
+                            songListByArtistName.forEach(System.out::println);
+                            System.out.print("Enter the song name to play the song: ");
+                            songName = scanner.nextLine();
+                            System.out.println(songRepository.getSongByName(songName));
+                            System.out.print("Enter 1 - pause, 2 - resume, 3 - stop: ");
+                            musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
+                            break;
+                        case 3:
+                            //Search for a song by name and play
+                            System.out.println("Enter the song name to play the song:");
+                            songName = scanner.nextLine();
+                            System.out.println(songRepository.getSongByName(songName));
+                            System.out.println(songRepository.getSongByName(songName).getSongPath());
+                            System.out.println("Enter 1 - pause, 2 - resume, 3 - stop: ");
+                            musicPlayerService.play(songRepository.getSongByName(songName).getSongPath());
+                            break;
+                        case 4:
+                            //Create playlist
+                            System.out.println("Enter the name of the playlist to be created: ");
+                            String playlistName = scanner.nextLine();
+                            Playlist playlist = playlistRepository.createPlaylist(playlistName);
+                            System.out.println("Your playlist has been created with id: " + playlist.getPlaylistNumber());
+                            break;
+                        case 5:
+                            //Select a playlist and add songs
+                            System.out.println("Playlists: \n--------------");
+                            System.out.println(String.format("%s\t%-10s", "Id", "Name\n--------------"));
+                            playlists = playlistRepository.displayAllPlaylists();
+                            playlists.forEach(System.out::println);
+                            System.out.println("Enter the playlist id to add songs to the Playlist: ");
+                            int playlistId = scanner.nextInt();
+                            scanner.nextLine();
+                            System.out.println("Enter the song ids to add to the playlist separated by comma: ");
+                            String songIds = scanner.nextLine();
+                            boolean songsAdded = playlistRepository.addSong(playlistId, songIds);
+                            if (songsAdded) {
+                                System.out.println("Songs added to the playlist");
+                            } else {
+                                System.out.println("Something went wrong");
+                            }
+                            break;
+                        case 6:
+                            //View playlist and select a song from the playlist to play
+                            System.out.println("Playlists: \n--------------");
+                            System.out.println(String.format("%s\t%-10s", "Id", "Name\n--------------"));
+                            playlists = playlistRepository.displayAllPlaylists();
+                            playlists.forEach(System.out::println);
+                            System.out.print("Enter the playlist id to view songs from the playlist: ");
+                            int playlistIdToGetSongsFrom = scanner.nextInt();
+                            List<Song> songsFromPlaylist = playlistRepository.displayPlaylistSongs(playlistIdToGetSongsFrom);
+                            songsFromPlaylist.forEach(System.out::println);
+                            System.out.print("Enter the song id to play the song: ");
+                            int songId = scanner.nextInt();
+                            System.out.println(songRepository.getSongBySerialNumber(songId));
+                            System.out.println("Enter 1 - pause, 2 - resume, 3 - stop: ");
+                            musicPlayerService.play(songRepository.getSongBySerialNumber(songId).getSongPath());
+                            break;
+                        case 7:
+                            break;
+                        default:
+                            System.out.println("Invalid option selected");
+                    }
+                } catch (SongNotFoundException | GenreNotFoundException | ArtistNameNotFoundException exception) {
+                    System.err.println(exception.getMessage());
+
                 }
             } while (option != 7);
-        } catch (SQLException | SongNotFoundException | GenreNotFoundException |
-                 ArtistNameNotFoundException exception) {
+
+        } catch (SQLException exception) {
             exception.printStackTrace();
         }
 
