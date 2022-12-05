@@ -2,6 +2,7 @@ package com.niit.jdp;
 
 import com.niit.jdp.exception.ArtistNameNotFoundException;
 import com.niit.jdp.exception.GenreNotFoundException;
+import com.niit.jdp.exception.PlaylistNotFoundException;
 import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Playlist;
 import com.niit.jdp.model.Song;
@@ -24,8 +25,8 @@ public class Main {
             System.out.println("-------------------------------\nCatalog of Songs in the Jukebox\n-------------------------------");
             System.out.println();
             System.out.println("------------------------------------------------------------------------------------------------------------------------------");
-            System.out.println(String.format("%s\t%-25s\t%s\t%-20s\t%-20s\t%-10s", "ID", "Name", "Duration",
-                    "Genre", "Artist Name", "Album"));
+            System.out.printf("%s\t%-25s\t%s\t%-20s\t%-20s\t%-10s%n", "ID", "Name", "Duration",
+                    "Genre", "Artist Name", "Album");
             System.out.println("------------------------------------------------------------------------------------------------------------------------------");
             allSongs.forEach(System.out::println);
             String songName;
@@ -86,7 +87,7 @@ public class Main {
                         case 5:
                             //Select a playlist and add songs
                             System.out.println("Playlists: \n--------------");
-                            System.out.println(String.format("%s\t%-10s", "Id", "Name\n--------------"));
+                            System.out.printf("%s\t%-10s%n", "Id", "Name\n--------------");
                             playlists = playlistRepository.displayAllPlaylists();
                             playlists.forEach(System.out::println);
                             System.out.println("Enter the playlist id to add songs to the Playlist: ");
@@ -104,15 +105,17 @@ public class Main {
                         case 6:
                             //View playlist and select a song from the playlist to play
                             System.out.println("Playlists: \n--------------");
-                            System.out.println(String.format("%s\t%-10s", "Id", "Name\n--------------"));
+                            System.out.printf("%s\t%-10s%n", "Id", "Name\n--------------");
                             playlists = playlistRepository.displayAllPlaylists();
                             playlists.forEach(System.out::println);
                             System.out.print("Enter the playlist id to view songs from the playlist: ");
                             int playlistIdToGetSongsFrom = scanner.nextInt();
+                            scanner.nextLine();
                             List<Song> songsFromPlaylist = playlistRepository.displayPlaylistSongs(playlistIdToGetSongsFrom);
                             songsFromPlaylist.forEach(System.out::println);
                             System.out.print("Enter the song id to play the song: ");
                             int songId = scanner.nextInt();
+                            scanner.nextLine();
                             System.out.println(songRepository.getSongBySerialNumber(songId));
                             System.out.println("Enter 1 - pause, 2 - resume, 3 - stop: ");
                             musicPlayerService.play(songRepository.getSongBySerialNumber(songId).getSongPath());
@@ -122,7 +125,8 @@ public class Main {
                         default:
                             System.out.println("Invalid option selected");
                     }
-                } catch (SongNotFoundException | GenreNotFoundException | ArtistNameNotFoundException exception) {
+                } catch (SongNotFoundException | GenreNotFoundException | ArtistNameNotFoundException |
+                         PlaylistNotFoundException exception) {
                     System.err.println(exception.getMessage());
 
                 }
