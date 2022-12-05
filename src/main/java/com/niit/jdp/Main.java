@@ -119,7 +119,7 @@ public class Main {
                     default:
                         System.out.println("Invalid option selected");
                 }
-            } while (option != 7);
+            } while (option != 0);
         } catch (SQLException | SongNotFoundException | GenreNotFoundException |
                  ArtistNameNotFoundException exception) {
             exception.printStackTrace();
