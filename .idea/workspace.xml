@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added forEach() to iterate through displayAllPlaylists() object inside main()">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added a try-catch block inside the do-while loop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,13 +146,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00062" summary="added givenSongsDatabaseThenReturnNumberOfSongRecords() to the SongRepositoryTest class">
-      <created>1670058036701</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1670058036701</updated>
     </task>
     <task id="LOCAL-00063" summary="added givenSongsDatabaseThenReturnSongRecords() to the SongRepositoryTest class">
       <created>1670058114521</created>
@@ -491,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670223880269</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="added a try-catch block inside the do-while loop">
+      <created>1670232455940</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1670232455940</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -506,7 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created package exception and SongNotFoundException class inside exception package" />
     <MESSAGE value="added a SongNotFoundException for getSongBySerialNumber, getSongByName, displaySongsByGenre, displaySongsByArtistName inside SongRepository class" />
     <MESSAGE value="added a SongNotFoundException for methods inside SongRepositoryTest class" />
     <MESSAGE value="added a SongNotFoundException in the catch block of main() method" />
@@ -531,7 +529,8 @@
     <MESSAGE value="modified print statement inside play() in MusicPlayerService class" />
     <MESSAGE value="made changes in toString() method of Playlist class" />
     <MESSAGE value="added forEach() to iterate through displayAllPlaylists() object inside main()" />
-    <option name="LAST_COMMIT_MESSAGE" value="added forEach() to iterate through displayAllPlaylists() object inside main()" />
+    <MESSAGE value="added a try-catch block inside the do-while loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a try-catch block inside the do-while loop" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
