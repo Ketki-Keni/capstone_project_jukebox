@@ -85,15 +85,12 @@ public class PlaylistRepository {
         return playlist;
     }
 
-    public boolean addSong(int playlistId, String songIds) throws SQLException, PlaylistNotFoundException {
+    public boolean addSong(int playlistId, String songIds) throws SQLException {
         String updateQuery = "UPDATE `jukebox`.`playlist` SET `song_id` = ? WHERE `Playlist_number` = ?;";
         PreparedStatement preparedStatement = connection.prepareStatement(updateQuery);
         preparedStatement.setString(1, songIds);
         preparedStatement.setInt(2, playlistId);
         int result = preparedStatement.executeUpdate();
-        if (result == 0) {
-            throw new PlaylistNotFoundException("Playlist not found! Cannot add songs.");
-        }
         return result > 0;
     }
 }
