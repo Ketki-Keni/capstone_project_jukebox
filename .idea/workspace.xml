@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="made changes in test cases for PlaylistRepositoryTest class">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added 2 test cases in PlaylistRepositoryTest class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,9 +131,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistDatabaseThenPlaylistRecordsNotEquals" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistDatabaseThenPlaylistRecords" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.givenPlaylistDatabaseThenReturnSongRecordsFromPlaylist" />
       </list>
@@ -147,13 +147,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00058" summary="created SongRepositoryTest.java class">
-      <created>1670057421209</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1670057421209</updated>
     </task>
     <task id="LOCAL-00059" summary="added fields to the SongRepositoryTest class">
       <created>1670057715307</created>
@@ -491,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670211001724</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="added 2 test cases in PlaylistRepositoryTest class">
+      <created>1670212452214</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1670212452214</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -506,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added givenSongIdsThenAddSongsToPlaylistNotEquals() to the PlaylistRepositoryTest class" />
     <MESSAGE value="added givenPlaylistNameThenCreatePlaylistNotEquals() to the PlaylistRepositoryTest class" />
     <MESSAGE value="added givenPlaylistDatabaseThenReturnSongRecordsFromPlaylistNotEquals() to the PlaylistRepositoryTest class" />
     <MESSAGE value="modified toString() in the Playlist class" />
@@ -531,7 +530,8 @@
     <MESSAGE value="modified main method" />
     <MESSAGE value="replaced enhanced for loop with forEach()&#10;modified main()" />
     <MESSAGE value="made changes in test cases for PlaylistRepositoryTest class" />
-    <option name="LAST_COMMIT_MESSAGE" value="made changes in test cases for PlaylistRepositoryTest class" />
+    <MESSAGE value="added 2 test cases in PlaylistRepositoryTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 2 test cases in PlaylistRepositoryTest class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
