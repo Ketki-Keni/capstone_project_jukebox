@@ -99,7 +99,7 @@ public class Main {
                             if (songsAdded) {
                                 System.out.println("Songs added to the playlist");
                             } else {
-                                System.out.println("Something went wrong");
+                                System.err.println("Something went wrong! Couldn't add songs to the playlist");
                             }
                             break;
                         case 6:
