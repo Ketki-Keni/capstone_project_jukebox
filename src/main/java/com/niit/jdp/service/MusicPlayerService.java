@@ -51,7 +51,7 @@ public class MusicPlayerService {
                         break;
                     }
                     default: {
-                        System.out.println(" invalid ");
+                        System.out.println("Invalid option selected");
                     }
                 }
             } while (option == 1 || option == 2);
