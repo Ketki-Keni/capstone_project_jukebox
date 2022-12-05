@@ -48,7 +48,7 @@ public class Playlist {
 
     @Override
     public String toString() {
-        return String.format("%s\t%-10s\n", playlistNumber, name);
+        return String.format("%s\t%-10s", playlistNumber, name);
     }
 
     @Override
