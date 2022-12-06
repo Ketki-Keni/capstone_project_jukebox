@@ -28,6 +28,11 @@ public class SongRepository {
         musicPlayerService = new MusicPlayerService();
     }
 
+    /**
+     * This method returns all Song records from the database
+     *
+     * @return All song records
+     */
     public List<Song> displayAllSongs() {
         List<Song> songList = new ArrayList<>();
         String selectQuery = "SELECT * FROM `jukebox`.`song`;";
@@ -50,6 +55,14 @@ public class SongRepository {
         return songList;
     }
 
+    /**
+     * This method returns Song record from the database based on entered Song Id
+     * Throws SongNotFoundException when Song ID is not present in the database table
+     *
+     * @param serialNumber - Song Id
+     * @return song record based on Song ID
+     * @throws SongNotFoundException - Throws SongNotFoundException when Song Id is not present in the database table
+     */
     public Song getSongBySerialNumber(int serialNumber) throws SongNotFoundException {
         String selectQuery = "SELECT * FROM `jukebox`.`song` where (`serial_number` = ?);";
         Song song = null;
@@ -81,6 +94,14 @@ public class SongRepository {
         return song;
     }
 
+    /**
+     * This method returns Song record from the database based on entered Song name
+     * Throws SongNotFoundException when Song name is not present in the database table
+     *
+     * @param name - Name of the song
+     * @return song record based on Song name
+     * @throws SongNotFoundException - Throws SongNotFoundException when Song name is not present in the database table
+     */
     public Song getSongByName(String name) throws SongNotFoundException {
         if (name == null || name.isEmpty()) {
             throw new SongNotFoundException("Song name cannot be null. Please enter a song name.");
@@ -113,6 +134,14 @@ public class SongRepository {
 
     }
 
+    /**
+     * This method returns all Song records from the database based on entered genre
+     * Throws SongNotFoundException when genre is not present in the database table
+     *
+     * @param genre - genre of the song
+     * @return song records based on genre
+     * @throws GenreNotFoundException - Throws SongNotFoundException when genre is not present in the database table
+     */
     public List<Song> displaySongsByGenre(String genre) throws GenreNotFoundException {
         List<Song> songList = new ArrayList<>();
         if (genre == null || genre.isEmpty()) {
@@ -144,6 +173,14 @@ public class SongRepository {
 
     }
 
+    /**
+     * This method returns all Song records from the database based on Artist's name
+     * Throws SongNotFoundException when Artist name is not present in the database table
+     *
+     * @param artistName - Name of the Artist
+     * @return song records based on Artist's name
+     * @throws ArtistNameNotFoundException - Throws SongNotFoundException when Artist name is not present in the database table
+     */
     public List<Song> displaySongsByArtistName(String artistName) throws ArtistNameNotFoundException {
         List<Song> songList = new ArrayList<>();
         String selectQuery = "SELECT * FROM `jukebox`.`song` where (`artist_name` = ?);";
