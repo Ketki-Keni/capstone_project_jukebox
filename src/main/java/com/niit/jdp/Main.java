@@ -37,7 +37,7 @@ public class Main {
                         "\n1 - Search for a song by genre \n2 - Search for a song by Artist's name " +
                         "\n3 - Search for a song by name and play " +
                         "\n4 - Create playlist \n5 - Select a playlist and add songs " +
-                        "\n6 - View playlist and select a song to play  \n7 - Exit");
+                        "\n6 - View playlist and select a song to play  \n7 - Catalog Sorted alphabetically based on Song name\n8 - Exit");
                 System.out.print("Select an option: ");
                 System.out.println();
                 option = scanner.nextInt();
@@ -121,6 +121,20 @@ public class Main {
                             musicPlayerService.play(songRepository.getSongBySerialNumber(songId).getSongPath());
                             break;
                         case 7:
+                            System.out.println("------------------------------------------------------------------------------------------------------------------------------");
+                            System.out.printf("%s\t%-25s\t%s\t%-20s\t%-20s\t%-10s%n", "ID", "Name", "Duration",
+                                    "Genre", "Artist Name", "Album");
+                            System.out.println("------------------------------------------------------------------------------------------------------------------------------");
+                            List<Song> allSongsSorted = songRepository.displayAllSongs();
+                            allSongsSorted.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
+                            allSongsSorted.forEach(System.out::println);
+                            System.out.print("Enter the song id to play the song: ");
+                            int songIdToPlay = scanner.nextInt();
+                            scanner.nextLine();
+                            System.out.println(songRepository.getSongBySerialNumber(songIdToPlay));
+                            System.out.println("Enter 1 - pause, 2 - resume, 3 - stop: ");
+                            musicPlayerService.play(songRepository.getSongBySerialNumber(songIdToPlay).getSongPath());
+                        case 8:
                             break;
                         default:
                             System.out.println("Invalid option selected");
@@ -130,7 +144,7 @@ public class Main {
                     System.err.println(exception.getMessage());
 
                 }
-            } while (option != 7);
+            } while (option != 8);
 
         } catch (SQLException exception) {
             exception.printStackTrace();
