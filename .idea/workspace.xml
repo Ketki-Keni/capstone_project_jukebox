@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added file Jukebox.sql in resources">
+    <list default="true" id="ea6d42bf-90b7-4226-abf3-c133a86bead8" name="Changes" comment="added java doc comments for all methods in the SongRepository class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,13 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669806246701</updated>
-    </task>
-    <task id="LOCAL-00071" summary="added givenSongIdThenReturnSongRecordByIdNotEquals() to the SongRepositoryTest class">
-      <created>1670061893722</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1670061893722</updated>
     </task>
     <task id="LOCAL-00072" summary="added givenSongNameThenReturnSongRecordByNameNotEquals() to the SongRepositoryTest class">
       <created>1670062030654</created>
@@ -492,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670296476130</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="added java doc comments for all methods in the SongRepository class">
+      <created>1670297148859</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1670297148859</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="replaced SongNotFoundException with GenreNotFoundException in method displaySongsByGenre of SongRepository class" />
     <MESSAGE value="added GenreNotFoundException for methods inside SongRepositoryTest class" />
     <MESSAGE value="added GenreNotFoundException in the catch block of main()" />
     <MESSAGE value="created ArtistNameNotFoundException.java inside exception package" />
@@ -532,7 +531,8 @@
     <MESSAGE value="modified print statement in else block of case 5 inside main()" />
     <MESSAGE value="modified addSong method in the PlaylistRepository class" />
     <MESSAGE value="added file Jukebox.sql in resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="added file Jukebox.sql in resources" />
+    <MESSAGE value="added java doc comments for all methods in the SongRepository class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added java doc comments for all methods in the SongRepository class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

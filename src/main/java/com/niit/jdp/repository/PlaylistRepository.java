@@ -6,7 +6,6 @@
 
 package com.niit.jdp.repository;
 
-import com.niit.jdp.exception.GenreNotFoundException;
 import com.niit.jdp.exception.PlaylistNotFoundException;
 import com.niit.jdp.exception.SongNotFoundException;
 import com.niit.jdp.model.Playlist;
@@ -29,7 +28,11 @@ public class PlaylistRepository {
         musicPlayerService = new MusicPlayerService();
     }
 
-
+    /**
+     * This method returns all playlist records from the database
+     *
+     * @return All playlist records
+     */
     public List<Playlist> displayAllPlaylists() throws SQLException {
         List<Playlist> playlistDetails = new ArrayList<>();
         String selectQuery = "SELECT `Playlist_number`,`name` FROM `jukebox`.`playlist`;";
@@ -45,7 +48,16 @@ public class PlaylistRepository {
         return playlistDetails;
     }
 
-    public List<Song> displayPlaylistSongs(int playlistId) throws SQLException, SongNotFoundException, GenreNotFoundException, PlaylistNotFoundException {
+    /**
+     * This method returns all songs from the playlist from the database based on entered playlist ID
+     * Throws SongNotFoundException when Song ID is not present in the database table, PlaylistNotFoundException
+     *
+     * @param playlistId - Playlist ID
+     * @return all songs from the playlist
+     * @throws SongNotFoundException     - Throws SongNotFoundException when Song ID is not present in the database table
+     * @throws PlaylistNotFoundException - PlaylistNotFoundException when Playlist ID is not present in the database table
+     */
+    public List<Song> displayPlaylistSongs(int playlistId) throws SQLException, SongNotFoundException, PlaylistNotFoundException {
         List<Song> songList = new ArrayList<>();
         String query = "SELECT * FROM `jukebox`.`playlist` WHERE `Playlist_number` = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -66,6 +78,12 @@ public class PlaylistRepository {
         return songList;
     }
 
+    /**
+     * This method creates a playlist when playlist name is entered.
+     *
+     * @param playlistName - Name of the Playlist
+     * @return playlist record that is created
+     */
     public Playlist createPlaylist(String playlistName) {
         Playlist playlist = new Playlist();
         String insertQuery = "INSERT INTO `jukebox`.`playlist` (`name`) VALUES (?);";
@@ -85,6 +103,13 @@ public class PlaylistRepository {
         return playlist;
     }
 
+    /**
+     * This method adds songs in the playlist based on entered playlist ID
+     *
+     * @param playlistId - Playlist ID
+     * @param songIds    - Song ID of all songs from the playlist
+     * @return boolean value that indicates if the song is added or not
+     */
     public boolean addSong(int playlistId, String songIds) throws SQLException {
         String updateQuery = "UPDATE `jukebox`.`playlist` SET `song_id` = ? WHERE `Playlist_number` = ?;";
         PreparedStatement preparedStatement = connection.prepareStatement(updateQuery);
